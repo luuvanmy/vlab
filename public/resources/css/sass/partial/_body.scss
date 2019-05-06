@@ -1,0 +1,149 @@
+body {
+  background: #ecf0f5;
+  @include font-page($font-Roboto-normal);
+  color: $text;
+  background: #ecf0f5;
+  // transition: all 0.5s ease;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family:'Open Sans',  'Roboto', Helvetica, Arial, sans-serif;
+  }
+}
+
+.bg-light {
+  background-color: $light3;
+}
+
+.bg-danger-light {
+  background: #ffe8ea !important;
+}
+
+.text-search {
+  min-width: 250px;
+  @media(max-width: 768px) {
+    min-width: initial;
+  }
+}
+
+.btn-action {
+  background-color: #c6d3e4;
+  border: 1px solid #b6c2cd;
+  box-shadow: 0 1px 1px #e0e0e0, inset 0 0 2px #fff;
+  color: #000;
+  border-radius: 25px !important;
+  padding: 5px 15px;
+}
+
+.select2-container .select2-selection--single {
+  height: 36px !important;
+  border-radius: 0 !important;
+}
+
+.select-warehouse {
+  max-width: 230px !important;
+}
+
+@media(max-width:1200px) {
+  .select-warehouse {
+    float: inherit !important;
+    margin-right: 5px;
+  }
+}
+
+@media(max-width:1024px) {
+  .btn-export-excel {
+    display: none;
+  }
+}
+
+.tools {
+  >.row {
+    >.pull-left,
+    >.pull-right {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 10px;
+    }
+    >.pull-left {
+      .min-width-180 {
+        min-width: 180px;
+      }
+      .min-width-250 {
+        min-width: 230px;
+        @media(max-width: 768px) {
+          min-width: initial;
+        }
+      }
+      &.element-4 {
+        input.input-search {
+          width: 300px;
+          @media(max-width: 1260px) {
+            width: calc(100% - 450px);
+          }
+        }
+        @media(max-width: 992px) {
+          width: 100%;
+          input.input-search {
+            width: calc(50% - 2px);
+          }
+          .width-50 {
+            width: calc(50% - 2px);
+            &.min-width-250 {
+              min-width: initial;
+            }
+            @media(max-width: 360px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .tools {
+    >.row {
+      >.pull-left {
+        .width-100 {
+          width: 100%;
+          div.input-search {
+            width: calc(100% - 43px);
+          }
+        }
+        .width-50 {
+          width: calc(50% - 2px);
+          @media(max-width: 360px) {
+            width: 100%;
+          }
+        }
+
+      }
+      >.pull-right,
+      .pull-left {
+        width: 100%;
+        .width-100 {
+          @media(max-width: 420px) {
+            width: 100%;
+          }
+          &.block-daterange{
+            @media(max-width: 420px) {
+              width: calc(100% - 43px);
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}

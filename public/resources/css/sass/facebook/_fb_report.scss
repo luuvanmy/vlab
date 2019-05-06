@@ -1,0 +1,211 @@
+.facebook-app {
+    .fb{
+        &-page {
+            // width: calc(100% - 60px);
+            height: 100%;
+            float: left;
+            background: #ecf0f5;
+            &:after {
+                clear: both;
+                content: ".";
+                display: block;
+                font-size: 0;
+                height: 0;
+                line-height: 0;
+                visibility: hidden;
+            }
+            &-report {
+                height: 100%;
+                .report {
+                    &-box {
+                        background: #ffffff;
+                        box-shadow: 0 0 5px 0px #e0e1e3;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            clear: both;
+                            display: table;
+                        }
+                        &-flex {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    &-title {
+                        border-bottom: 1px solid $border-color;
+                        padding: 15px;
+                        text-align: center;
+                    }
+                    &-wrap {
+                        padding: 10px 15px;
+                    }
+                    &-detail {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        width: 50%;
+                        float: left;
+                        li {
+                            padding: 5px;
+                        }
+                    }
+                    &-subtext {
+                        font-size: 14px;
+                        font-style: italic;
+                        text-align: right;
+                    }
+                    &-icon {
+                        height: 100%;
+                        width: 100%;
+                        border: 2px solid #32c861;
+                        border-radius: 50%;
+                        padding: 20px;
+                        position: relative;
+                        &.green {
+                            border-color: $success;
+                            &:before {
+                                border-color: $success;
+                            }
+                            i {
+                                color: $success;
+                            }
+                        }
+                        &.red {
+                            border-color: $danger;
+                            &:before {
+                                border-color: $danger;
+                            }
+                            i {
+                                color: $danger;
+                            }
+                        }
+                        &.yellow {
+                            border-color: $warning;
+                            &:before {
+                                border-color: $warning;
+                            }
+                            i {
+                                color: $warning;
+                            }
+                        }
+                        &.blue {
+                            border-color: $primary;
+                            &:before {
+                                border-color: $primary;
+                            }
+                            i {
+                                color: $primary;
+                            }
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            right: 5px;
+                            bottom: 5px;
+                            border-radius: 50%;
+                            border: 2px solid #32c861;
+                        }
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 30px;
+                            color:#32c861;
+                        }
+                        &-wrap {
+                            width: 100px;
+                            height: 100px;
+                            padding: 10px;
+                            float: left;
+                        }
+                    }
+                    &-content {
+                        width: calc(100% - 100px);
+                        padding: 10px;
+                        float: left;
+                        h4 {
+                            font-size: 18px;
+                            margin: 0; 
+                        }
+                    }
+                    &-counter {
+                        font-size: 25px;
+                        color:#32c861;
+                        word-break: break-word;
+                        .lnr {
+                            font-size: 25px;
+                            font-weight: 700;
+                        }
+                    }
+                    .text-success {
+                        color: $success !important;
+                    }
+                }
+            }
+        }
+        &-cont {
+            width: 100%;
+            height: 100%;
+            &-head {
+                padding: 10px;
+                height: 60px;
+                border-bottom: 1px solid $border-color;
+                display: flex;
+                align-items: center;
+                background: $white;
+                justify-content: space-between;
+                @media screen and (max-width: 500px){
+                    display: block;
+                    height: auto;
+                    div {
+                        .inline-block {
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            border-bottom: none;
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+                    &-title {
+                       display: none;
+                    }
+                    &-tools {
+                        display: block !important;
+                    }
+                }
+                >div {
+                    display: flex;
+                    align-items: center;
+                }
+                &-title {
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+                
+            }
+            &-body {
+                width: 100%;
+                height: calc(100% - 60px);
+                overflow-x: hidden;
+                overflow-y: auto;
+                padding: 20px;
+                &.no-scroll {
+                    overflow: hidden;
+                }
+                @media screen and (max-width: 500px) {
+                    .card-box {
+                        .tools {
+                            display: block !important;
+                        }
+                    }
+                }
+              
+            }
+        }
+    }
+}

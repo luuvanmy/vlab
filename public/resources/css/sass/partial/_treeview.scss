@@ -1,0 +1,104 @@
+.treeview , .treeview ul {
+  &:before {
+    content: "\f07c";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 6px;
+    bottom: 0;
+    left: -6px;
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #787878;
+    z-index: 1;
+  }
+} 
+.treeview >ul:last-child:before {
+  content: "";
+
+}
+
+.treeview, .treeview ul {
+  position: relative;
+    margin:0;
+    padding:0;
+    list-style:none
+}
+.treeview ul {
+    margin-left:1em;
+    position:relative
+}
+.treeview ul ul {
+    margin-left:.5em
+}
+.treeview:after ,.treeview ul:after {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:20px;
+    bottom:0;
+    left:0;
+    border-left:1px solid #393939;
+}
+.treeview li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    color:#ccc;
+    font-weight:700;
+    position:relative;
+}
+.treeview ul li:first-child:before{
+  border-top:0px solid;
+}
+.treeview ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid #393939;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.treeview ul li:last-child:before {
+    background:#fff;
+    height:auto;
+    top:1em;
+    bottom:0
+}
+.indicator {
+    margin-right:5px;
+}
+.treeview li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  font-weight: normal;
+  padding-left: 15px;
+}
+.treeview>li {
+  >a {
+    font-size: 18px;
+  }
+  >ul>li {
+    >a {
+      font-size: 17px;
+    }
+    >ul>li {
+      >a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.treeview li button, .treeview li button:active, .treeview li button:focus {
+    text-decoration: none;
+    color:#ccc;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}

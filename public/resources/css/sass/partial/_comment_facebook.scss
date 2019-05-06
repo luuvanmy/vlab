@@ -1,0 +1,101 @@
+.comments-group {
+    height: calc(100% - 24px);
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 10px 0;
+    background: #fff;
+    display: flex;
+    .user-comment {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid transparent !important;
+        .width-left-30 {
+            display: inline-block;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .width-push-right-40 {
+            margin-left: 10px;
+            padding-left: 5px;
+            .name {
+                display: inline-block;
+                padding-right: 5px;
+                color: #365899;
+                @include font-page($font-Roboto-bold);
+            }
+            .action {
+                padding-right: 5px;
+            }
+            .date {
+                font-size: 12px;
+                color: #777;
+            }
+            .content-comment {
+                float: left;
+                width: 100%;
+                padding: 8px 10px;
+                border-top: 1px solid #f4f4f4;
+                .cont {
+                    display: inherit;
+                    .text-center {
+                        max-height: 300px;
+                        float: left;
+                        img {
+                            margin: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .comments-post {
+        float: left;
+        width: 100%;
+        background: #f7f7f9;
+        padding: 10px;
+        border-top: 1px solid $border-color;
+        .user-comment {
+            float: left;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 3px;
+            .group-action {
+                margin: 3px 0 6px;
+                .link-reply {
+                    margin-right: 10px;
+                    color: #365899;
+                    font-size: 13px;
+                    &:hover{
+                       text-decoration:underline; 
+                    }
+                }
+                .date {
+                    color: #90949c;
+                }
+            }
+            .comment_input {
+                width: 100%;
+                background-color: #fff;
+                border: 1px solid #dddfe2;
+                border-radius: 30px;
+                padding: 5px 15px;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .content-post {
+                padding: 10px;
+                background: #fff;
+                border-radius: 10px;
+            }
+        }
+        ul {
+            width: calc(100% - 40px);
+            border-top: 1px solid transparent !important;
+            margin: 10px 0;
+            margin-left: 40px;
+        }
+    }
+}

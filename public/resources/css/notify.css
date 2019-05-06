@@ -1,0 +1,162 @@
+/* font variable */
+.alert {
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  padding: 20px 15px;
+  width: 350px;
+  z-index: 2000 !important;
+  font-size: 14px;
+}
+
+.alert b {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.alert-default {
+  background-color: white;
+  color: #555555;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(255, 255, 255, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(255, 255, 255, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 255, 255, 0.2);
+}
+
+.alert-default a,
+.alert-default .alert-link {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.alert-inverse {
+  background-color: #292b2c;
+  color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(33, 33, 33, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(33, 33, 33, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(33, 33, 33, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(33, 33, 33, 0.2);
+}
+
+.alert-inverse a,
+.alert-inverse .alert-link {
+  color: #fff;
+}
+
+.alert-primary {
+  background-color: #4489e4;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+}
+
+.alert-primary a,
+.alert-primary .alert-link {
+  color: #ffffff;
+}
+
+.alert-success {
+  background-color: #32c861;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+}
+
+.alert-success a,
+.alert-success .alert-link {
+  color: #ffffff;
+}
+
+.alert-info {
+  background-color: #34d3eb;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+}
+
+.alert-info a,
+.alert-info .alert-link {
+  color: #ffffff;
+}
+
+.alert-warning {
+  background-color: #ffa91c;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+}
+
+.alert-warning a,
+.alert-warning .alert-link {
+  color: #ffffff;
+}
+
+.alert-danger {
+  background-color: #f96a74;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+}
+
+.alert-danger a,
+.alert-danger .alert-link {
+  color: #ffffff;
+}
+
+.alert-rose {
+  background-color: #eb3573;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 12px 20px -10px rgba(233, 30, 99, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(233, 30, 99, 0.2);
+          box-shadow: 0 12px 20px -10px rgba(233, 30, 99, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(233, 30, 99, 0.2);
+}
+
+.alert-rose a,
+.alert-rose .alert-link {
+  color: #ffffff;
+}
+
+.alert i[data-notify="icon"] {
+  font-size: 30px;
+  display: block;
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.alert span {
+  display: block;
+  max-width: 89%;
+}
+
+.alert-icon {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+
+.alert-icon i {
+  margin-top: -7px;
+  top: 5px;
+  position: relative;
+}
+
+.alert-with-icon {
+  padding-left: 65px;
+}
+
+.alert a, .alert-link {
+  color: #555555;
+}
+
+.alert .close {
+  font-size: inherit;
+  color: #FFFFFF;
+  opacity: .9;
+  text-shadow: none;
+}
+/*# sourceMappingURL=notify.css.map */

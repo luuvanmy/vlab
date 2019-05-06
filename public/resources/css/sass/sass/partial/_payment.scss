@@ -1,0 +1,524 @@
+#topnav{
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden;
+   
+}
+.footer{
+    display: none !important;
+}
+.jconfirm-title-c{
+    font-size: 18px !important;
+    .jconfirm-title{
+        color:$text  !important;
+        font-weight: normal !important;
+    }
+
+}
+.jconfirm-content-pane{
+    height: 0 !important;
+}
+.jconfirm-buttons{
+    padding-bottom:  0 !important;
+    button{
+        text-transform: none !important;
+        min-width: 80px !important;
+    }
+}
+.payment{
+    // height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background: #f2f2f2;
+    .form-control{
+        border-left-color:transparent !important;
+        border-right-color:transparent !important;
+        border-top-color:transparent !important;
+        &:focus{
+            border-left-color:transparent !important;
+            border-right-color:transparent !important;
+            border-top-color:transparent !important;
+        }
+    }
+    .nav{
+        list-style: none;
+        margin: 0;
+        padding: 0 15px;
+        width: 100%;
+        background: #fff;
+        li{
+            display: inline-block;
+            a{
+                padding: 0px 15px;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                color: #666f7b;
+                font-size: 14px;
+                text-transform: uppercase;
+                position: relative;
+                border-bottom: 3px solid transparent;
+                &:hover,&:focus{
+                    background: transparent;
+                }
+            }
+            &.active{
+                >a{
+                    // color:$custom;
+                    // border-bottom-color: $custom;
+                    // background-color: #f2f2f2;
+                    border-color:$success;
+                    // &:after{
+                    //     content: '';
+                    //     width: 100%;
+                    //     height: 2px;
+                    //     position: absolute;
+                    //     bottom: -1px;
+                    //     right: 0;
+                    //     background: $custom;
+                    // }
+                }
+            }
+        }
+        &bar{
+            &-left{
+                width: 250px;
+                float: left;
+            }
+            &-right{
+                width: calc(100% - 250px);
+                float: right;
+            }
+        }
+    }
+    .select-box{
+        width: 200px;
+        float: left;
+        padding: 5px 15px 0 15px;
+    }
+    &-top{
+        width: 100%;
+        height: 50px;
+        background: $primary;
+        padding: 0;
+        .btn{
+            &-default{
+                background: #fff !important;
+            }
+            &-fullscreen{
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                background: transparent !important;
+                color:#fff;
+                border: none;
+            }
+        }
+        
+        &:after{
+            @include clear;
+        }
+    }
+    &-content{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        .wrap{
+            width: 60%;
+            height: 100%;
+            overflow: hidden;
+            float: left;
+            background: #f2f2f2;
+            &-header{
+                height: 50px;
+                width: 100%;
+                border-bottom: 2px solid #eee;
+                .select-box{
+                    width: 180px;
+                    float: right;
+                    padding: 0;
+                }
+            }
+            &-body{
+                height: calc(100% - 100px);
+                width: 100%;
+                overflow: hidden;
+                .tab-content{
+                    padding: 0px ;
+                    height: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    .tab-pane{
+                        height: 100%;
+                        overflow: hidden;
+                    }
+                    .btn{
+                        color:#888;
+                        font-weight: 600;
+                        display: inline-block;
+                        box-shadow: none !important;
+                        &.active{
+                            color:#000;
+                        }
+                    }
+                    .btn-item{
+                        width: calc(25% - 20px);
+                        margin:10px;
+                        display: inline-block;
+                        padding: 20px 5px;
+                        white-space: normal;
+                    }
+                    .btn-product{
+                        background: #fff;
+                        border:1px solid #ddd;
+                        @include box-shadow;
+                        padding: 15px;
+                        width:calc(25% - 20px);
+                        margin: 10px;
+                        white-space: normal;
+                        
+                    }
+                    .list-group-source , .list-group-products{
+                       
+                        height: 50px;
+                        border-bottom: 1px solid #eee;
+                        padding: 10px 0;
+                        &-btn{
+                            width: 50px;
+                            float: left;
+                            padding: 0 10px;
+                            .btn{
+                                border: none !important;
+                                border-radius: 50% !important;
+                                width: 30px;
+                                height: 30px;
+                                font-size: 18px;
+                                line-height: 30px;
+                                padding: 0;
+                                text-align: center;
+                                color:$text;
+                                background: transparent !important;
+                                i{
+                                    transition: all 0.5s ease;
+                                }
+                                &.is-active{
+                                    i{
+                                        transform: rotate(-180deg);
+                                    }
+                                }
+                            }
+                        }
+                        &-table{
+                            width: calc(100% - 50px);
+                            float: left;
+                            overflow-x: auto;
+                        }
+                        .btn{
+                            margin-right: 10px;
+                        }
+                       
+                    }
+                    .list-sources ,.list-products{
+                        padding: 20px 0;
+                        width: 100%;
+                        height: calc(100% - 50px);
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        &-overflow{
+                            position: absolute;
+                            top: 50px;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            z-index: 100;
+                            background: #fff;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.3s ease;
+                            transform: translateY(30px);
+                            .title{
+                                height: 20px;
+                                margin: 0;
+                                padding: 0 15px;
+                                h3{
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    margin: 0;
+                                }
+                            }
+                            .list{
+                                height: calc(100% -20px);
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                                padding: 15px 0;
+                            }
+                            
+                            &.active{
+                                opacity: 1;
+                                visibility: visible;
+                                transform:none;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            &-footer{
+                border-top: 1px solid #eee;
+                height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 40px;
+            }
+        }
+        .sidebar{
+            width: 40%;
+            height: 100%;
+            overflow: hidden;
+            float: right;
+            background: #fff;
+            border-left: 1px solid #eee;
+            &-header{
+                height:50px;
+                background: #f2f2f2;
+                text-align: center;
+                padding: 0 15px;
+                font-size: 18px;
+                line-height: 50px;
+                font-weight: bold;
+                border-top: 1px solid #eee;
+                
+                &:after{
+                    @include clear;
+                }
+            }
+            &-footer{
+                // height: 140px;
+                // border-top: 1px solid #eee;
+                // background: #f2f2f2;
+                .total{
+                    // padding: 5px 15px;
+                    .table{
+                        margin: 0;
+                    }
+                    // height: 50px;
+                    // line-height: 40px;
+                    // font-weight: 600;
+                    // font-size: 16px;
+                    .form-control{
+                        padding: 0 12px;
+                    }
+                    .item-total{
+                        height: 40px;
+                    }
+                }
+                .btn-groups{
+                    text-align: center;
+                    .icon-wrap{
+                        width: 50%;
+                        float: left;
+                        padding: 0 15px;
+                    }
+                    // .btn{
+                    //     width: 50%;
+                    //     float: left;
+                    //     display: block;
+                    //     margin: 0;
+                    // }
+                    .btn-item{
+                        width: 33%;
+                        padding: 5px;
+                        float: left;
+                    }
+                    .btn{
+                        display: block;
+                        width: 100%;
+                        font-size: 16px;
+                        padding: 6px 0;
+                        text-align: center;
+                        // text-transform: uppercase;
+                    }
+                    &:after{
+                        @include clear;
+                    }
+                }
+            }
+            &-body{
+                height: calc(100% - 190px);
+                width: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                table{
+                    td{
+                        font-size: 12px;
+                        border-top: none !important;
+                        border-bottom: 1px solid #ddd !important;
+                    }
+                }
+                .list-group{
+                    &-item{
+                        border-bottom: 1px solid #ddd !important;
+                        position: relative;
+                        .item{
+                            &-name{
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                margin-bottom: 5px;
+                            }
+                            &-quantity{
+                                user-select: none;
+                                i{
+                                    color:$primary;
+                                    font-size: 25px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                                span{
+                                    width: 40px;
+                                    height: 25px;
+                                    border: 1px solid #eee;
+                                    text-align: center;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    line-height: 25px;
+                                    
+                                }
+                            }
+                            &-price{
+                                line-height: 25px;
+                                text-align: right;
+                            }
+                            &-content{
+
+                            }
+                            &-btn{
+                                position: absolute;
+                                top: 15px;
+                                right: 15px;
+                                
+                            }
+                        }
+                        .btn{
+                            &-remove{
+                                background: #fff;
+                                position: absolute;
+                                top: 0px;
+                                right: 0px;
+                            }
+                        }
+                        &:after{
+                            @include clear;
+                        }
+                    }
+                }
+                .table{
+                    .td-quantity{
+                        user-select: none;
+                        width: 95px;
+                        .mdi{
+                            color:$primary;
+                            font-size: 20px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        span{
+                            width: 25px;
+                            height: 20px;
+                            border-bottom: 1px solid #eee;
+                            text-align: center;
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 12px;
+                            line-height: 20px;
+                            
+                        }
+                    }
+                    .td-price{
+                        width: 85px;
+                        text-align: right;
+                    }
+                    .td-name{
+                        // width: 150px;
+                    }
+                    .td-index{
+                        width: 30px;
+                    }
+                    .td-action{
+                        width: 30px;
+                    }
+                }
+                .card-box{
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    border: none;
+                    text-align: center;
+                    margin-bottom: 0;
+                    h4{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: 0;
+                        transform:translateY(-50%);
+                    }
+                }
+               
+            }
+        }
+        &:after{
+            @include clear;
+        }
+    }
+    
+}
+.modal-payment,.payment{
+    .item-table{
+        // text-align: center;
+        display: inline-block;
+        padding: 15px;
+        text-align: center;
+        .img-booked ,.img-active{
+            display: none;
+        }
+        &.is{
+            &-active{
+                
+                
+            }
+            &-booked{
+                
+            }
+        }
+        &-icon{
+            // height: 60px;
+            width: 60px;
+            margin-bottom: 5px;
+            @include center;
+            position: relative;
+            img{
+               width: 100%;
+            }
+            
+        }
+        strong{
+            color:$text;
+            font-size: 12px;
+            font-weight: bold;
+            // position: absolute;
+            // top: 50%;
+            // width: 100%;
+            // left: 0;
+            // transform: translateY(-50%);
+        }
+    }
+}

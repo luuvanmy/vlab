@@ -1,0 +1,1279 @@
+.facebook-app {
+    .fb-modal{
+        @media screen and (max-width: 500px){
+            width: 100% !important;
+            margin: 0;
+            overflow-y: auto;
+            height: 100%;
+        }
+        .modal {
+            &-content {
+                padding: 0 !important;
+                border: none;
+            }
+            &-header {
+                padding: 10px 15px !important;
+                color: $white;
+                border: none;
+                background: $primary;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div {
+                    margin-right: auto;
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+                a{
+                    margin-left: auto;
+                    color: $white;
+                }
+            }
+            &-body {
+                padding: 15px !important;
+                background: #ecf0f5;
+                @media screen and (max-width: 500px){
+                    padding: 5px !important;
+                }
+                &:after {
+                    clear: both;
+                    content: ".";
+                    display: block;
+                    font-size: 0;
+                    height: 0;
+                    line-height: 0;
+                    visibility: hidden;
+                }
+            }
+            &-footer {
+                padding: 15px;
+            }
+        }
+        &-tag {
+            .modal-body {
+                >ul {
+                    list-style: none;
+                    padding: 0px;
+                    margin: 15px;
+                    background: $white;
+                    border: 1px solid #dadada;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    >li {
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        &:after {
+                            clear: both;
+                            content: ".";
+                            display: block;
+                            font-size: 0;
+                            height: 0;
+                            line-height: 0;
+                            visibility: hidden;
+                        }
+                        &:hover {
+                            background: #ecf0f5;
+                        }
+                    }
+                }
+                .tag {
+                    &-color {
+                        float: left;
+                        padding: 5px;
+                        position: relative;
+                        cursor: pointer;
+                        &-choose {
+                            width: 20px;
+                            height: 20px;
+                            float: left;
+                            border-radius: 50%;
+                            background-color: #4489e4;
+                        }
+                    }
+                    &-title {
+                        margin-left: 10px;
+                        width: calc(100% - 100px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                    }
+                    &-tool {
+                        i {
+                            font-size: 22px;
+                            border: 1px solid #ccc;
+                            padding: 2px;
+                            border-radius: 5px;
+                        }
+                    }
+                    &-create {
+                        &:after {
+                            clear: both;
+                            content: ".";
+                            display: block;
+                            font-size: 0;
+                            height: 0;
+                            line-height: 0;
+                            visibility: hidden;
+                        }
+                        &-color {
+                            float: left;
+                            width: 40px;
+                            height: 40px;
+                            border: 1px solid #dadada;
+                            background: $white;
+                            border-right: 0;
+                            padding: 6px;
+                            border-top-left-radius: 10px !important;
+                        }
+                        &-title {
+                            width: calc(100% - 40px);
+                            height: 40px;
+                            float: left;
+                            input {
+                                border-left: 0;
+                                border-top-right-radius: 10px !important;
+                                height: 100%;
+                                &:focus {
+                                    border-color: #dadada !important;
+                                }
+                            }
+                        }
+                        &-tool {
+                            width: 100%; 
+                            &:after {
+                                clear: both;
+                                content: ".";
+                                display: block;
+                                font-size: 0;
+                                height: 0;
+                                line-height: 0;
+                                visibility: hidden;
+                            }
+                            .btn {
+                                width: 100%;
+                                border-bottom-left-radius: 10px !important;
+                                border-bottom-right-radius: 10px !important;
+                                padding: 4px 10px;
+                                min-height: 30px;
+                                transition: 0.5s all ease;
+                                &.btn-success {
+                                    background-color: $white !important;
+                                    color: $success !important;
+                                    &:hover {
+                                        background-color: $success !important;
+                                        color: $white !important;
+                                    }
+                                }
+                                &.btn-danger {
+                                    background-color: $white !important;
+                                    color: $danger !important;
+                                    &:hover {
+                                        background-color: $danger !important;
+                                        color: $white !important;
+                                    }
+                                }
+                            }
+                            &-item {
+                                width: 50%;
+                                float: left;
+                                &:first-child {
+                                    .btn {
+                                        border-bottom-left-radius: 10px !important;
+                                        border-bottom-right-radius: 0 !important;
+                                    }
+                                }
+                                &:last-child {
+                                    .btn {
+                                        border-bottom-left-radius: 0 !important;
+                                        border-bottom-right-radius: 10px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-order {
+            width: 400px;
+            .modal-content {
+                padding: 0;
+            }
+            .modal-body {
+                padding: 0;
+                .bubble-order-content {
+                    h4 {
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 10px 0;
+                    }
+                    &-item {
+                        padding: 10px 0;
+                        border-bottom: 1px solid $border-color;
+                        &:last-child {
+                            border: none;
+                        }
+                        &:after {
+                            clear: both;
+                            content: ".";
+                            display: block;
+                            font-size: 0;
+                            height: 0;
+                            line-height: 0;
+                            visibility: hidden;
+                        }
+                        &-img {
+                            width: 65px;
+                            height: 65px;
+                            float: left;
+                            border: 1px solid $border-color;
+                        }
+                        &-detail {
+                            width: calc(100% - 75px);
+                            margin-left: 10px;
+                            float: left;
+                            color: #555;
+                        }
+                    }
+                    &-info {
+                        color: #555;
+                        padding: 10px 0;
+                        border-bottom: 1px solid $border-color;
+                        &:last-of-type {
+                            border: none;
+                        }
+                        p {
+                            color: #999;
+                            font-weight: 600;
+                            margin: 0;
+                            font-size: 15px;
+                        }
+                        table {
+                            td {
+                                padding: 5px 0;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-noti {
+            background: $white;
+            width: 450px;
+            @media screen and (max-width: 500px){
+                width: 100%;
+                margin: 0;
+            }
+            &-icon {
+                &-wrap {
+                    text-align: center;
+                    padding: 15px; 
+                    &.danger {
+                        background: $danger;
+                    }
+                    &.primary {
+                        background: $primary;
+                    }
+                    &.success {
+                        background: $success;
+                    }
+                    &.info {
+                        background: $info;
+                    }
+                    &.warning {
+                        background: $warning;
+                    }
+                    &.purple {
+                        background: $purple;
+                    }
+                    &.pink {
+                        background: $pink;
+                    }
+                    p {
+                        color: $white;
+                        font-size: 19px;
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+                    i {
+                        font-size: 40px;
+                        color: $white;
+                    }
+                }
+            }
+            &-cont {
+                background: $white;
+                padding: 10px;
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+            &-btn {
+                padding: 10px;
+                text-align: right;
+            }
+        }
+        &-profile {
+            background: $white;
+            width: 350px;
+            overflow: hidden;
+            @media screen and (max-width: 500px){
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+            &-background {
+                height: 125px;
+                margin-bottom: 65px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $primary;
+                &-info {
+                    position: relative;
+                    bottom: -55px;
+                }&-close {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    color: $white;
+                }
+            }
+            &-avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+            &-name {
+                font-size: 20px;
+                text-align: center;
+            }
+            &-detail {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: center;
+                box-shadow: 2px 2px 5px 0 #ccc;
+                &-icon {
+                    width: 50px;
+                    height: 50px;
+                    border-right: 2px solid #eee;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &-cont {
+                    width: calc(100% - 50px);
+                    padding: 0px 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        margin: 0;
+                        &.profile-number {
+                            font-size: 19px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                &-wrap {
+                    padding: 10px;
+                    padding-bottom: 50px;
+                    position: relative;
+                }
+            }
+            &-btn {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                & .btn {
+                    padding: 10px;
+                }
+                i {
+                    font-size: 17px;
+                }
+                &-50 {
+                    width: 50%;
+                    float: left;
+                }
+            }
+            &-edit {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $white;
+                padding: 10px;
+                transform: translateX(100%);
+                transition: 0.3s all ease;
+                &.open {
+                    transform: none;
+                }
+            }
+        }
+        &-chatbot {
+            @media screen and (max-width: 500px){
+                width: 100%;
+                margin: 0;
+                overflow-y: auto;
+                height: 100%;
+            }
+            .modal {
+                &-content {
+                    padding: 0 !important;
+                    border: none;
+                }
+                &-header {
+                    padding: 10px 15px !important;
+                    color: $white;
+                    border: none;
+                    background: $primary;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    div {
+                        margin-right: auto;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                    a{
+                        margin-left: auto;
+                        color: $white;
+                    }
+                }
+                &-body {
+                    padding: 15px !important;
+                    background: #ecf0f5;
+                    @media screen and (max-width: 500px){
+                        padding: 5px !important;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+                &-footer {
+                    padding: 15px;
+                }
+            }
+            &-message {
+                &-col {
+                    &-left {
+                        width: 120px;
+                        height: 100%;
+                        float: left;
+                        padding: 10px;
+                        .fb-modal-chatbot-message-col-item {
+                            text-align: center;
+                            margin-bottom: 15px;
+                            padding: 10px;
+                            cursor: pointer;
+                            user-select: none;
+                            &:hover {
+                                border: 2px solid $primary;
+                                color: $primary;
+                                font-weight: 500;
+                            }
+                        }
+                        @media screen and (max-width: 991px){
+                            width: 100%;
+                            white-space: nowrap;
+                            overflow: auto;
+                            .fb-modal-chatbot-message-col-item {
+                                display: inline-block;
+                                width: 100px;
+                                margin-right: 10px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    &-right {
+                        width: calc(100% - 120px);
+                        height: 100%;
+                        float: left;
+                        padding: 10px;
+                        @media screen and (max-width: 991px){
+                            width: 100%;
+                        }
+                    }
+                    &-item {
+                        background: $white;
+                        border-radius: 5px;
+                        transition: 0.5s all ease;
+                        border: 2px solid $white;
+                        box-shadow: $box-shadow;
+                        >i {
+                            margin-bottom: 5px;
+                        }
+                        &.active {
+                            border: 2px solid $primary;
+                            color: $primary;
+                            font-weight: 600;
+                        }
+                        &-card {
+                            padding: 10px;
+                            position: relative;
+                            textarea {
+                                border-top-left-radius: 15px !important;
+                                border-top-right-radius: 15px !important;
+                                resize: none;
+                                margin:0;
+                                padding-bottom: 25px;
+                                &.border {
+                                    border-radius: 15px !important;
+                                }
+                                &[aria-invalid="true"]{
+                                    border-color: #fb4c54;
+                                    &:focus {
+                                        border-color: #fb4c54 !important;
+                                    }
+                                }
+                                &:focus {
+                                    ~.input-tooltip  {
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            &-text {
+                                padding: 15px 25px;
+                                position: relative;
+                                &.gallery {
+                                    .fb-modal-chatbot-message-col-item-card {
+                                        &-gallery {                           
+                                            position: relative;
+                                            transition: 0.5s all ease;
+                                            background: $white;
+                                            display: inline-block;
+                                            width: 100%;
+                                            border-radius: 15px;
+                                            &-slide {
+                                                margin-top: 10px;
+                                                padding: 5px;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                display: flex;
+                                                justify-content: center;
+                                                &-icon {
+                                                    margin-right: 10px;
+                                                    margin-bottom: 5px;
+                                                    display: inline-block;
+                                                    transition: 0.5s all ease;
+                                                    position: relative;
+                                                    a {
+                                                        transition: 0.5s all ease;
+                                                        border-radius: 5px;
+                                                        background-color: $white;
+                                                        color: #999;
+                                                        border-color: #999;
+                                                        border: 1px solid;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        padding: 5px;
+                                                        width: 40px;
+                                                        position: relative;
+                                                        i {
+                                                            font-size: 18px;
+                                                        }
+                                                        &:hover {
+                                                            background-color: $white;
+                                                            color: $success;
+                                                            border-color: $success;
+                                                        }
+                                                        &.active {
+                                                            background-color: $white;
+                                                            color: $success;
+                                                            border-color: $success;
+                                                        }
+                                                    }
+                                                    .btn-remove {
+                                                        position: absolute;
+                                                        top: -9px;
+                                                        right: -7px;
+                                                        font-size: 17px;
+                                                        cursor: pointer;
+                                                    }
+                                                }
+                                                &-wrap {
+                                                    position: relative;
+                                                    width: 100%;
+                                                    transition: 0.5s all ease;
+                                                    left: calc(50% - 50px / 2);
+                                                }
+                                            }
+                                        }
+                                        &-btn {
+                                            &-left {
+                                                position: absolute;
+                                                top: 100px;
+                                                left: 0;
+                                                cursor: pointer;
+                                                &:hover {
+                                                    .btn-nav {
+                                                        border-color: $primary;
+                                                        i {
+                                                            color: $primary;
+                                                        }
+                                                    }
+                                                }
+        
+                                            }
+                                            &-right {
+                                                position: absolute;
+                                                top: 100px;
+                                                right: 0;
+                                                cursor: pointer;
+                                                &:hover {
+                                                    .btn-nav {
+                                                        border-color: $primary;
+                                                        i {
+                                                            color: $primary;
+                                                        }
+                                                    }
+                                                }
+        
+                                            }
+                                        }
+                                    }
+                                }
+                                textarea, input, select {
+                                    &:disabled {
+                                        background: $white;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+                            &-edit-button {
+                                position: absolute;
+                                background: #fff;
+                                padding: 15px;
+                                left: 100%;
+                                top: 15px;
+                                width: 100%;
+                                border: 1px solid #4489e4;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: 0.5s all ease;
+                                &.open {
+                                    visibility: visible;
+                                    opacity: 1;
+                                    top: 15px;
+                                }
+                                @media screen and (max-width: 991px){
+                                    position: relative;
+                                    left: 0;
+                                }
+                            }
+                            &-tools {
+                                position: absolute;
+                                top: 15px;
+                                right: -3px;
+                                a {
+                                    display: block;
+                                    transition: .3s all ease;
+                                    color: #ccc;
+                                    &:hover {
+                                        &.primary {
+                                            color: $primary;
+                                        }
+                                        &.danger {
+                                            color: $danger;
+                                        }
+                                    }
+                                    i {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                            &-textarea {
+                                position: relative;
+                                .tools {
+                                    position: absolute;
+                                    bottom: 5px;
+                                    right: 5px;
+                                    background: $white;
+                                    i {
+                                        color: #999;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                            &-button {
+                                text-align: center;
+                                border: 1px solid #dadada;
+                                color: $primary;
+                                cursor: pointer;
+                                position: relative;
+                                overflow: hidden;
+                                &:after {
+                                    clear: both;
+                                    content: ".";
+                                    display: block;
+                                    font-size: 0;
+                                    height: 0;
+                                    line-height: 0;
+                                    visibility: hidden;
+                                }
+                                &:hover {
+                                    border-color: $primary;
+                                    .icon-close-button {
+                                        transform: none;
+                                    }
+                                }
+                                &:last-child {
+                                    border-bottom-left-radius: 15px !important;
+                                    border-bottom-right-radius: 15px !important;
+                                }
+                                &-icon {
+                                    width: 50px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px;
+                                    border-left: 1px solid #dadada;
+                                    height: 40px;
+                                    transition: 0.4s all ease;
+                                    &.icon-close-button {
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        right: 0;
+                                        transform: translateX(100%);
+                                        background: $danger;
+                                        color: $white;
+                                        border: 1px solid $danger;
+                                        &.icon-close-mess {
+                                            transform: none; 
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                                &-name {
+                                    width: calc(100% - 50px);
+                                    float: left;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px;
+                                    height: 40px;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 1;
+                                }
+                            }
+                            &-image {
+                                border: 1px solid #dadada;
+                                border-radius: 15px;
+                                padding: 30px;
+                                text-align: center;
+                                color: #999;
+                                cursor: pointer;
+                                transition: 0.4s all ease;
+                                width: 100%;
+                                height: 120px;
+                                position: relative;
+                                overflow: hidden;
+                                &:hover {
+                                    border-color: $primary;
+                                    color: $primary;
+                                }
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
+                                    border-radius: 15px;
+                                    overflow: hidden;
+                                }
+                                &-tools {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    background: rgba(0,0,0,0.5);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: 0.5s all ease;
+                                    &-btn {
+                                        cursor: pointer;
+                                        padding: 6px;
+                                        border-radius: 50%;
+                                        background: $white;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        &:first-child {
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                    i {
+                                        font-size: 18px;
+                                    }
+                                }
+                                &:hover {
+                                    .fb-modal-chatbot-message-col-item-card-image-tools {
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                            &-gallery {
+                                .fb-modal-chatbot-message-col-item-card-image {
+                                    border-bottom-left-radius: 0 !important;
+                                    border-bottom-right-radius: 0 !important;
+                                    img {
+                                        border-bottom-left-radius: 0 !important;
+                                        border-bottom-right-radius: 0 !important;
+                                    }
+                                }
+                                &-wrap {
+                                    position: relative;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                            }
+                            .btn-nav {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 5px;
+                                background: $white;
+                                border-radius: 50%;
+                                border: 1px solid #dadada;
+                                width: 30px;
+                                height: 30px;
+                                transition: 0.4s all ease;
+                                user-select: none;
+                                i {
+                                    color: #999;
+                                }
+                            }
+                            &-list {
+                                border: 1px solid #dadada;
+                                padding: 5px;
+                                position: relative;
+                                &:first-child {
+                                    border-top-left-radius: 15px !important;
+                                    border-top-right-radius: 15px !important;
+                                }
+                                &:after {
+                                    clear: both;
+                                    content: ".";
+                                    display: block;
+                                    font-size: 0;
+                                    height: 0;
+                                    line-height: 0;
+                                    visibility: hidden;
+                                }
+                                &-left {
+                                    float: left;
+                                    width: calc(100% - 100px);                                
+                                    padding: 5px;
+                                }
+                                &-right {
+                                    float: left;
+                                    width: 100px;
+                                    height: 100%;                                    
+                                    padding: 5px;
+                                }
+                                input:first-child {
+                                    border-top-left-radius: 15px !important;
+                                    border-top-right-radius: 15px !important;
+                                }
+                                .pos-rela{
+                                    input {
+                                        border-radius: 0 !important;
+                                    }
+                                }
+                                .pos-rela:first-child {
+                                    input {
+                                        border-top-left-radius: 15px !important;
+                                        border-top-right-radius: 15px !important;
+                                    }
+                                }
+                                .fb-modal-chatbot-message-col-item-card-image {
+                                    height: 90px;
+                                }
+                                .fb-modal-chatbot-message-col-item-card-button-icon {
+                                    width: 40px;
+                                    i {
+                                        font-size: 18px;
+                                    }
+                                }
+                                .fb-modal-chatbot-message-col-item-card-button-name {
+                                    width: calc(100% - 40px);
+                                }
+                                .btn-remove {   
+                                    position: absolute;
+                                    top: auto;
+                                    right: 5px;
+                                    bottom: 5px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            &-script {
+                width: 720px;
+                .timeline-line {
+                    padding: 0;
+                    &:before {
+                        background-color: #4489e4;
+                        left: 0;
+                        z-index: 9;
+                        @media screen and (min-width: 501px){
+                            left: 130px;
+                        }
+                    }
+                }
+                .timeline-badge {
+                    background: #ecf0f5;
+                    border: 1px solid #ecf0f5;
+                    position: absolute;
+                    left: -9px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 9;
+                    width: 18px;
+                    height: 18px;
+                    &:after {
+                        content:'';
+                        position: absolute;
+                        background: $primary;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    @media screen and (min-width: 501px){
+                        left: -40px;
+                        top: 15px;
+                        transform: none;
+                    }
+                }
+                .timeline-cont {
+                    border-radius: 0;
+                    border-color: transparent;
+                    padding: 0;
+                    margin-left: 0;
+                    margin-bottom: 15px;
+                    display: block;
+                    box-shadow: 0px 1px 2px #eee;
+                    @media screen and (min-width: 501px){
+                        margin-left: 160px;
+                    }
+                }
+                .timeline-detail {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                }
+                &-time {
+                    position: absolute;
+                    top: -3px;
+                    width: 250px;
+                    background: #fff;
+                    padding: 10px;
+                    transform: translateY(10px);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.5s all ease;
+                    z-index: 9;
+                    border: 1px solid #dadada;
+                    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+                    &.open {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: none;
+                    }
+                }
+            }
+            &-card {
+                padding: 10px;
+                background: $white;
+                border-radius: 5px;
+                transition: 0.5s all ease;
+                border: 2px solid $white;
+                box-shadow: $box-shadow; 
+                &.script {
+                    background: transparent;
+                    border: transparent;
+                }
+                .fb-body-cont-item-detail {
+                    width: calc(100% - 145px);
+                    margin-top: 0; 
+                    padding: 15px 10px;
+                    position: relative;
+                    @media screen and (min-width: 501px){
+                        width: 100%;
+                    }
+                    >a {
+                        color: #777;
+                        text-decoration: none;
+                        position: relative;    
+                        width: calc(100% - 20px);
+                        display: block;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                        
+                    }
+                    .btn-remove-script {
+                        position: absolute;
+                        top: 50%;
+                        right: 5px;
+                        transform: translateY(-50%);
+                        width: 20px;
+                        i {
+                            font-size: 20px;
+                            color: $danger;
+                        }
+                    }
+                }
+                .fb-body-cont-item-time {
+                    border-right: 1px solid #dadada;
+                    padding: 15px 10px 15px 15px;
+                    width: 150px;
+                    height: 100%;
+                    position: static;
+                    @media screen and (min-width: 501px){
+                        padding: 15px 10px;    
+                        position: absolute;
+                        left: -170px;
+                        border-right: none;
+                    }
+                    a {
+                        color: #777;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    i {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .dropdown-chatbot-action {
+                >ul {
+                    >li {
+                        padding: 10px;
+                        cursor: pointer;
+                        transition: 0.3s all ease;
+                        &:hover{
+                            background: #ecf0f5;
+                        }
+                    }
+                }
+            }
+            textarea {
+                border-top-left-radius: 15px !important;
+                border-top-right-radius: 15px !important;
+                resize: none;
+                margin:0;
+                padding-bottom: 25px;
+                &.border {
+                    border-radius: 15px !important;
+                }
+                &[aria-invalid="true"]{
+                    border-color: #fb4c54;
+                    &:focus {
+                        border-color: #fb4c54 !important;
+                    }
+                }
+                &:focus {
+                    ~.input-tooltip  {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            input {
+                &:focus {
+                    ~.input-tooltip  {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            input[aria-invalid="true"]{
+                border-color: #fb4c54;
+                &:focus {
+                    border-color: #fb4c54 !important;
+                }
+            }
+            span.text-danger {
+                position: absolute;
+                bottom: -32px;
+                left: 0;                         
+                background: rgba(251, 76, 84, 0.7);
+                border-radius: 5px;
+                padding: 5px;
+                color: #ffffff !important;
+                z-index: 9;
+                white-space: nowrap;
+            }
+            .input-tooltip {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: rgba(68, 137, 228, 0.7);
+                padding: 5px;
+                color: white;
+                border-radius: 5px;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.4s all ease;
+                z-index: 9;
+            }
+        }
+        &-post {
+            .modal {
+                &-content {
+                    padding: 0 !important;
+                    border: none;
+                }
+                &-header {
+                    padding: 10px 15px !important;
+                    color: $white;
+                    border: none;
+                    background: $primary;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    div {
+                        margin-right: auto;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                    a{
+                        margin-left: auto;
+                        color: $white;
+                    }
+                }
+                &-body {
+                    padding: 15px !important;
+                    background: #ecf0f5;
+                }
+            }
+        }
+        &-campaign {
+            &-tab {
+                .nav-item {
+                    a {
+                        background-color: transparent !important;
+                        color: #555 !important;
+                        &:focus {
+                            background-color: transparent !important;
+                            color: #555 !important;
+                        }
+                        &:hover {
+                            background-color: transparent !important;
+                            color: $primary !important;
+                        }
+                    }
+                    &.active {
+                        a {
+                            background-color: transparent !important;
+                            border-bottom: 2px solid $primary !important;
+                            color: $primary !important;
+                            &:focus {
+                                border-bottom: 2px solid $primary !important;
+                                color: $primary !important;
+                                background-color: transparent !important;
+                            }
+                            &:hover {
+                                border-bottom: 2px solid $primary !important;
+                                color: $primary !important;
+                                background-color: transparent !important;
+                            }
+                        }
+                    }
+                }
+            }
+            &-panel-heading {
+                background: $white !important;
+                &[aria-expanded="true"] {
+                    border: 1px solid $primary !important;
+                }
+            }
+            &-panel-body {
+                border: 1px solid $primary;
+            }
+        }
+        &-select-page {
+            .modal-body {
+                padding: 0 !important;
+                .fb-user-list{
+                    height: auto;
+                    max-height: 500px;
+                    &-info {
+                        .checkbox {
+                            margin-left: auto !important;
+                            label:after {
+                                left: -2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-video {
+            max-width: unset;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            .modal-content {
+                border-radius: 0;
+                height: 100%;
+                background: rgba(0, 0, 0, .9);
+                border: none;
+            }
+            .modal-header {
+                height: 0;
+                padding: 0;
+                border: none;
+                button.close {
+                    i {
+                        font-size: 40px;
+                        color: white;
+                    }
+                }
+            }
+            .modal-body {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+    }
+    .pos-rela {
+        position: relative;
+    }
+}

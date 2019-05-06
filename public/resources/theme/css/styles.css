@@ -1,0 +1,984 @@
+/* CSS Document 
+Melonfree - Diseño Version 1.0
+Diseño: Javier Preda
+Fecha de Creacion: 23/06/2011
+Fuente Principal: Amaranth (Google)
+Tamaño Screen: 1200px
+Espaciado: 20px;
+Colores principales:
+/******************************************************/
+
+/*LESS VARIABLES
+@default-text-color: #6d635d;
+@default-nav: #615f62;
+@spacing: 20px;
+@wrap:1200px;*/
+/******************************************************/
+
+/*RESET*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+nav ul {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+a {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+ins {
+    background-color: #FFFF99;
+    color: #000000;
+    text-decoration: none;
+}
+mark {
+    background-color: #FFFF99;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC -moz-use-text-color -moz-use-text-color;
+    border-right: 0 none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+}
+input, select {
+    vertical-align: middle;
+}
+::-moz-selection{
+    background:#f5c692;
+    
+}
+
+::selection {
+    background:#f5c692;
+    
+}
+body {
+    background: url("../gfx/bgtexture.jpg") repeat scroll 0 0 transparent;
+    color: #6D635D;
+    font-family: Amaranth;
+}
+header {
+    background: url("../gfx/top-paint62.jpg") repeat-x scroll center top transparent;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+#wrapper {
+    height: 240px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 1120px;
+}
+#wrapper2 {
+    margin: 0 auto;
+    width: 1200px;
+}
+#logo {
+    background: url("../gfx/logo-melonfree-199x112.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 112px;
+    margin-top: 87px;
+    opacity: 1;
+    width: 379px;
+}
+#logo a {
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition:opacity 0.5s linear;
+    background: url("../gfx/logo-hover160x57.jpg") no-repeat scroll right 44px transparent;
+    display: block;
+    opacity: 0;
+}
+#logo a:hover {
+    background: url("../gfx/logo-hover160x57.jpg") no-repeat scroll right 44px transparent;
+    opacity: 1;
+}
+nav {
+    float: right;
+    font-weight: lighter;
+    height: 136px;
+    margin-top: 70px;
+    width: 428px;
+}
+nav a.firstbutton {
+    background: url("../gfx/botonera-408x274.jpg") repeat scroll 0 0 transparent;
+    color: #615F62;
+    display: block;
+    float: left;
+    font-size: 23px;
+    font-weight: lighter;
+    height: 92px;
+    padding: 44px 15px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 106px;
+}
+nav a.firstbutton:hover {
+    background: url("../gfx/botonera-408x274.jpg") repeat scroll 0 136px transparent;
+}
+nav a.secondbutton {
+    background: url("../gfx/botonera-408x274.jpg") repeat scroll 272px 0 transparent;
+    color: #615F62;
+    display: block;
+    float: left;
+    font-size: 23px;
+    font-weight: lighter;
+    height: 80px;
+    margin-left: 10px;
+    padding: 56px 15px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 106px;
+}
+nav a.secondbutton:hover {
+    background: url("../gfx/botonera-408x274.jpg") repeat scroll 272px 136px transparent;
+}
+nav a.thirdbutton {
+    background: url("../gfx/botonera-408x274.jpg") repeat scroll 136px 0 transparent;
+    color: #615F62;
+    display: block;
+    float: left;
+    font-size: 23px;
+    font-weight: lighter;
+    height: 80px;
+    margin-left: 10px;
+    padding: 56px 15px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 106px;
+}
+nav a.thirdbutton:hover {
+    background: url("../gfx/botonera-408x274.jpg") repeat scroll 136px 136px transparent;
+}
+.linebreak {
+    background: url("../gfx/breaklinetop1200.png") repeat-x scroll 0 0 transparent;
+    clear: both;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 1200px;
+}
+#middlecontainer {
+    clear: both;
+    margin-top: 20px;
+}
+#bigmelon {
+    background: url("../gfx/big-melon436x401.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 401px;
+    width: 600px;
+}
+#bigmelon span {
+    clear: both;
+    float: left;
+    font-size: 18px;
+    margin-bottom: 43px;
+    margin-left: 360px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+#bigmelon span.ly-1 {
+    color: #E3A888;
+    margin-left: 375px;
+}
+#bigmelon span.ly-2 {
+    color: #9A8E43;
+    margin-left: 417px;
+}
+#bigmelon span.ly-3 {
+    color: #F99A47;
+    margin-left: 440px;
+}
+#bigmelon span.ly-4 {
+    color: #FAB060;
+    margin-left: 440px;
+}
+#bigmelon span.ly-5 {
+    color: #FABF65;
+    margin-left: 435px;
+}
+#bigmelon span.ly-6 {
+    color: #A34942;
+    margin-left: 405px;
+}
+#right {
+    float: right;
+    width: 536px;
+}
+#intro {
+    float: right;
+    margin-top: 20px;
+    text-align: center;
+    width: 536px;
+}
+#intro h1 {
+    color: #6D635D;
+    font-size: 69px;
+    font-weight: lighter;
+    padding-left: 36px;
+}
+#intro h3 {
+    color: #929A5A;
+    font-size: 34px;
+    font-weight: lighter;
+    padding-left: 36px;
+}
+#intro p {
+    font-size: 18px;
+    margin-top: 20px;
+    padding-left: 76px;
+    padding-right: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+#intro p a {
+    color: #979E62;
+    text-decoration: none;
+}
+#requestquote {
+    float: right;
+}
+#requestquote a.request-quote {
+    background: url("../gfx/requestaquote536x222.png") no-repeat scroll 10px 0 transparent;
+    clear: both;
+    display: block;
+    height: 111px;
+    margin-top: 24px;
+    width: 536px;
+}
+#requestquote a.request-quote:hover {
+    background: url("../gfx/requestaquote536x222.png") no-repeat scroll 10px -111px transparent;
+}
+.howwerock {
+    clear: both;
+    float: left;
+}
+#page-2 {
+    clear: both;
+    height: 1352px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+    width: 1200px;
+}
+#page-2 img {
+    text-align: center;
+}
+#menu-right {
+    -moz-transition: opacity 2s linear 0s;
+    -webkit-transition: opacity 2s linear;
+	-moz-transition:opacity 2s linear;
+	opacity:0;
+    background: url("../gfx/menuright60x156.png") no-repeat scroll 0 0 transparent;
+    height: 148px;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    width: 61px;
+}
+#menu-right a.up {
+    -moz-transition: background 0.2s ease-out 0s;
+    -webkit-transition: background 0.2s ease-out;
+    background: url("../gfx/up-arrow.png") no-repeat scroll center bottom transparent;
+    display: block;
+    float: right;
+    height: 45px;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 35px;
+}
+#menu-right a.up:hover {
+    background: url("../gfx/up-arrow.png") no-repeat scroll center top transparent;
+}
+#menu-right a.down {
+    -moz-transition: background 0.2s ease-out 0s;
+    -webkit-transition: background 0.2s ease-out;
+    background: url("../gfx/dow-arrow.png") no-repeat scroll center top transparent;
+    display: block;
+    float: right;
+    height: 45px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 35px;
+}
+#menu-right a.down:hover {
+    background: url("../gfx/dow-arrow.png") no-repeat scroll center bottom transparent;
+}
+#tracer {
+    background: none repeat scroll 0 0 #00CC00;
+    color: #000000;
+    font-size: 20px;
+    opacity: 0.5;
+    padding: 4px;
+    position: fixed;
+    right: 0;
+    z-index: 40;
+}
+#frasescontainer {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1200px;
+    z-index: 30;
+}
+#infos {
+    height: 1352px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 1200px;
+    z-index: 20;
+}
+#infos .how-wd {
+    background: url("../gfx/howecanhlpu176x176.png") no-repeat scroll 0 0 transparent;
+    height: 176px;
+    left: 107px;
+    position: absolute;
+    top: 214px;
+    width: 176px;
+}
+#infos .how-wd h2 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 48px;
+}
+#infos .how-dvl {
+    background: url("../gfx/howecanhlpuprog176.png") no-repeat scroll 0 0 transparent;
+    height: 176px;
+    left: 911px;
+    position: absolute;
+    top: 214px;
+    width: 176px;
+}
+#infos .how-dvl h2 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 48px;
+}
+#infos .wd {
+    background: url("../gfx/webdesign314.png") no-repeat scroll 0 0 transparent;
+    height: 314px;
+    left: 40px;
+    position: absolute;
+    top: 364px;
+    width: 314px;
+}
+#infos .wd ul {
+    font-size: 18px;
+    list-style: none outside none;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 109px;
+}
+#infos .wd ul li {
+    clear: both;
+    font-style: italic;
+}
+#infos .dvl {
+    background: url("../gfx/development314.png") no-repeat scroll 0 0 transparent;
+    height: 314px;
+    left: 840px;
+    position: absolute;
+    top: 362px;
+    width: 314px;
+}
+#infos .dvl ul {
+    font-size: 18px;
+    list-style: none outside none;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 109px;
+}
+#infos .dvl ul li {
+    clear: both;
+    font-style: italic;
+}
+#infos .phase1 {
+    height: 137px;
+    position: absolute;
+    top: 667px;
+    width: 1200px;
+}
+#infos .phase1 .ball1 {
+    background: url("../gfx/wd1-137.png") no-repeat scroll 0 0 transparent;
+    height: 137px;
+    left: 39px;
+    position: absolute;
+    width: 137px;
+}
+#infos .phase1 .ball1 span {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+#infos .phase1 .ball2 {
+    background: url("../gfx/dvlp1-137.png") no-repeat scroll 0 0 transparent;
+    height: 137px;
+    left: 1020px;
+    position: absolute;
+    width: 137px;
+}
+#infos .phase1 .ball2 span {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+#infos .phase2 {
+    height: 137px;
+    position: absolute;
+    top: 783px;
+    width: 1200px;
+}
+#infos .phase2 .ball1 {
+    background: url("../gfx/wd2-137.png") no-repeat scroll 0 0 transparent;
+    height: 137px;
+    left: 123px;
+    position: absolute;
+    width: 137px;
+}
+#infos .phase2 .ball1 span {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+#infos .phase2 .ball2 {
+    background: url("../gfx/dvlp2-137.png") no-repeat scroll 0 0 transparent;
+    height: 137px;
+    left: 941px;
+    position: absolute;
+    width: 137px;
+}
+#infos .phase2 .ball2 span {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+#infos .phase3 {
+    height: 137px;
+    position: absolute;
+    top: 875px;
+    width: 1200px;
+}
+#infos .phase3 .ball1 {
+    background: url("../gfx/wd3-137.png") no-repeat scroll 0 0 transparent;
+    height: 137px;
+    left: 237px;
+    position: absolute;
+    width: 137px;
+}
+#infos .phase3 .ball1 span {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+#infos .phase3 .ball2 {
+    background: url("../gfx/wd3-137.png") no-repeat scroll 0 0 transparent;
+    height: 137px;
+    left: 833px;
+    position: absolute;
+    width: 137px;
+}
+#infos .phase3 .ball2 span {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+#infos .aboutus {
+    background: url("../gfx/aboutusbig512x508.png") no-repeat scroll 0 0 transparent;
+    height: 508px;
+    left: 348px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 827px;
+    width: 512px;
+    z-index: 20;
+}
+#infos .aboutus h2 {
+    font-size: 36px;
+    font-weight: lighter;
+    margin-top: 80px;
+}
+#infos .aboutus p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 40px;
+}
+#grafismos {
+    height: 1352px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1100px;
+    z-index: 10;
+}
+#grafismos img.punteadotop {
+    left: 190px;
+    position: absolute;
+    top: 87px;
+}
+#grafismos img.minimelon {
+    left: 392px;
+    position: absolute;
+    top: 323px;
+    z-index: 9;
+}
+#grafismos img.melonslice {
+    left: 184px;
+    position: absolute;
+    top: 488px;
+    z-index: 8;
+}
+#grafismos img.punteadodown {
+    left: 0;
+    position: absolute;
+    top: 600px;
+}
+#grafismos img.skypeimg {
+   -webkit-transition: opacity 0.5s linear;
+   -moz-transition:opacity 0.5s linear;
+    left: 750px;
+    opacity: 0;
+    position: absolute;
+    top: 140px;
+}
+#grafismos img.twitterimg {
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition:opacity 0.5s linear;
+    left: 762px;
+    opacity: 0;
+    position: absolute;
+    top: 275px;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+}
+#page-3 {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    width: 1200px;
+}
+#page-3 h2 {
+    font-size: 36px;
+    font-weight: lighter;
+    text-align: center;
+}
+#page-3 #options {
+    float: left;
+    height: 50px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding-bottom: 1em;
+    text-align: center;
+    width: 1200px;
+}
+#page-3 #options ul {
+    height: 50px;
+    list-style: none outside none;
+    margin: 0 auto;
+    text-align: center;
+    width: 880px;
+}
+#page-3 #options li {
+    float: left;
+    margin-bottom: 0.2em;
+}
+#page-3 #options li a {
+    color: #929A5A;
+    margin-right: 35px;
+    padding: 5px;
+    text-decoration: none;
+}
+#page-3 #options li a:hover {
+    background: none repeat scroll 0 0 #F9AF5F;
+    border-radius: 15px 15px 15px 15px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+}
+#page-3 #options li a:active {
+    background-color: #FF3300;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) inset;
+}
+#page-3 #options li a.selected {
+    background-color: #FF3300;
+    border-radius: 15px 15px 15px 15px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+}
+#page-3 nav.portfolio-nav {
+    float: left;
+    height: 50px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    text-align: center;
+    width: 1200px;
+}
+#page-3 nav.portfolio-nav a {
+    color: #929A5A;
+    margin-right: 35px;
+    padding: 5px;
+    text-decoration: none;
+}
+#page-3 nav.portfolio-nav a:hover, #page-3 nav.portfolio-nav a:focus, #page-3 nav.portfolio-nav a.selected {
+    background: none repeat scroll 0 0 #FF3300;
+    border-radius: 15px 15px 15px 15px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+}
+#page-3 ul.portfolio-container {
+    clear: both;
+    height: 2000px;
+    list-style: none outside none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+    width: 970px;
+}
+#page-3 ul.portfolio-container li {
+    float: left;
+    height: 203px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    width: 303px;
+}
+#page-3 ul.portfolio-container li a {
+    background: url("../gfx/porfoliobourder303x210.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 193px;
+    padding-top: 10px;
+    width: 303px;
+}
+#page-3 ul.portfolio-container li a:hover {
+    background: url("../gfx/porfoliobourder303x210.png") no-repeat scroll 0 -205px transparent;
+}
+#page-4 {
+    background: url("../gfx/fondocontacts.jpg") no-repeat scroll center 5px transparent;
+    clear: both;
+    height: 575px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    width: 1200px;
+}
+#page-4 h2 {
+    font-size: 36px;
+    font-weight: lighter;
+    text-align: center;
+}
+#page-4 #contact-container {
+    clear: both;
+    margin: 0 auto;
+    width: 1120px;
+}
+#page-4 #contact-container #left-contact, #page-4 #contact-container #right-contact {
+    float: left;
+    text-align: center;
+    width: 400px;
+}
+#page-4 #contact-container #left-contact img, #page-4 #contact-container #right-contact img {
+    clear: both;
+    text-align: center;
+}
+#page-4 #contact-container #left-contact h3, #page-4 #contact-container #right-contact h3 {
+    clear: both;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#page-4 #contact-container #form-contact {
+    float: left;
+    margin-top: 20px;
+    width: 320px;
+}
+#page-4 #contact-container #form-contact .input {
+    clear: both;
+    margin: 0 auto 10px;
+    text-align: center;
+    width: 241px;
+}
+#page-4 #contact-container #form-contact .inputform {
+    background: url("../gfx/formtextfield.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #6D635D;
+    font-size: 15px;
+    font-style: italic;
+    height: 40px;
+    padding-left: 18px;
+    width: 223px;
+}
+#page-4 #contact-container #form-contact .textareaform {
+    background: url("../gfx/textarea.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #6D635D;
+    font-size: 15px;
+    font-style: italic;
+    height: 130px;
+    padding-left: 18px;
+    padding-top: 12px;
+    resize: none;
+    width: 224px;
+}
+#page-4 #contact-container #form-contact .inputform:focus, #page-4 #contact-container #form-contact .textareaform:focus {
+    outline: medium none;
+}
+#page-4 #contact-container #form-contact .buttonform {
+    background: url("../gfx/send237x35.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-style: italic;
+    height: 35px;
+    width: 237px;
+}
+footer {
+    background: url("../gfx/footer-180.jpg") repeat-x scroll 0 0 transparent;
+    clear: both;
+    height: 110px;
+    padding-top: 70px;
+    width: 100%;
+}
+footer #footercontainer {
+    margin: 0 auto;
+    width: 1200px;
+}
+footer #footercontainer #left {
+    float: left;
+}
+
+footer #footercontainer #left a.html5 {
+    float: left;
+    background:url(../gfx/html5-melonfree.jpg) no-repeat ;
+    width:57px;
+    height:80px;
+    margin-right:20px;
+    display:block;
+}
+
+footer #footercontainer #left a.html5:hover {
+    background:url(../gfx/html5-melonfree.jpg) 0px -80px no-repeat ;
+}
+
+
+footer #footercontainer #left span {
+    font-size: 15px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+footer #footercontainer #left span a {
+    color: #FF6600;
+    text-decoration: none;
+}
+footer #footercontainer #left span a:hover {
+    text-decoration: underline;
+}
+footer #footercontainer #right-footer {
+    float: right;
+    margin-top: 5px;
+}
+footer #footercontainer #right-footer span {
+    float: right;
+    font-style: italic;
+    margin-right: 10px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+footer #footercontainer #right-footer nav.footernav {
+    float: right;
+    height: 40px;
+    margin-top: 0;
+    width: 260px;
+}
+footer #footercontainer #right-footer nav.footernav a.facebook {
+    background: url("../gfx/social198x79.jpg") repeat scroll -159px 0 transparent;
+    display: block;
+    float: right;
+    height: 39px;
+    margin-right: 10px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.facebook:hover {
+    background: url("../gfx/social198x79.jpg") repeat scroll -159px 39px transparent;
+    height: 39px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.twitter {
+    background: url("../gfx/social198x79.jpg") repeat scroll -80px 0 transparent;
+    display: block;
+    float: right;
+    height: 39px;
+    margin-right: 10px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.twitter:hover {
+    background: url("../gfx/social198x79.jpg") repeat scroll -80px 39px transparent;
+    height: 39px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.skype {
+    background: url("../gfx/social198x79.jpg") repeat scroll -40px 0 transparent;
+    display: block;
+    float: right;
+    height: 39px;
+    margin-right: 10px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.skype:hover {
+    background: url("../gfx/social198x79.jpg") repeat scroll -40px 39px transparent;
+    height: 39px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.linkedin {
+    background: url("../gfx/social198x79.jpg") repeat scroll -119px 0 transparent;
+    display: block;
+    float: right;
+    height: 39px;
+    margin-right: 10px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.linkedin:hover {
+    background: url("../gfx/social198x79.jpg") repeat scroll -119px 39px transparent;
+    height: 39px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.behance {
+    background: url("../gfx/social198x79.jpg") repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 39px;
+    margin-right: 10px;
+    width: 39px;
+}
+footer #footercontainer #right-footer nav.footernav a.behance:hover {
+    background: url("../gfx/social198x79.jpg") repeat scroll 0 39px transparent;
+    height: 39px;
+    width: 39px;
+}
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+

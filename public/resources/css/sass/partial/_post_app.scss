@@ -1,0 +1,751 @@
+.post-app {
+    .fb {
+        &-sidebar {
+            width: 85px;
+            background: $white;
+            float: left;
+            height: 100%;
+            position: relative;
+            &-menu {
+                position: relative;
+                height: 100%;
+                >ul {
+                    >li {
+                        width: 85px;
+                        height: 85px;
+                        >a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            color: #999;
+                            transition: 0.5s all ease;
+                            &.create-quick {
+                                background: $gradient-blue;
+                                color: $white;
+                                i {
+                                    font-size: 36px;
+                                }
+                                &:hover {
+                                    background: $gradient-blue;
+                                    color: $white;
+                                }
+                            }
+                            &.active {
+                                border-left: 4px solid $facebook-color; 
+                                border-top: 1px solid $border-color; 
+                                border-bottom: 1px solid $border-color; 
+                                color: $facebook-color;
+                            }
+                            &:hover {
+                                color: $facebook-color;
+                                background: none;
+                            }
+                        }
+                    }
+                }
+                .avatar-account {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 10px;
+                    height: 85px;
+                    width: 85px;
+                    &-img {
+                        border: 3px solid $facebook-color;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        &-body {
+            width: calc(100% -  85px);
+            height: 100%;
+            float: left;
+            &-header {
+                height: 85px;
+                border-bottom: 1px solid $border-color;
+                padding: 25px;
+                font-size: 24px;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &-cont {
+                height: calc(100% - 85px);
+                background: #ecf0f5;
+                padding: 25px;
+                overflow: hidden auto;
+                .table-post {
+                    background: $white;
+                    thead {
+                        background: #eee;
+                        th {
+                            text-transform: uppercase;
+                            text-align: center;
+                            min-width: 100px;
+                        }
+                    }
+                    tbody {
+                        td {
+                            padding: 0;
+                            position: relative;
+                            min-width: 100px;
+                            .times {
+                                padding: 10px;
+                                @media screen and (max-width: 1200px) {
+                                    padding: 5px;
+                                }
+                                &-item {
+                                    padding: 15px;
+                                    position: relative;
+                                    height: 50px;
+                                    transition: .4s all ease;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    font-size: 15px;
+                                    font-weight: 500;   
+                                    &-tools {
+                                        position: absolute; 
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translate(100%, -50%);
+                                        transition: .4s all ease;
+                                        i {
+                                            filter: grayscale(100%);
+                                            font-size: 17px;
+                                            &:hover {
+                                                filter: grayscale(0);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover {
+                                    .times-item {
+                                        &-tools {
+                                            right: 10px;
+                                            transform: translate(0, -50%);
+                                        }
+                                    }
+                                }
+                                &:nth-child(even) {
+                                    background: #f3f3f3;
+                                }
+                                &-add {
+                                    padding: 15px;
+                                    position: relative;
+                                    height: 50px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px dashed #999;
+                                    transition: .4s all ease;
+                                    cursor: pointer;
+                                    &:hover {
+                                        border: 1px solid #3795ff;
+                                        color: #3795ff;
+                                    }
+                                    @media screen and (max-width: 1200px) {
+                                        padding: 5px;
+                                        i {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        margin-bottom: 1.5em;
+                        background: transparent;
+                        border: none;
+                        thead {
+                            th {
+                                background-color: #888da5;
+                                border: 1px solid #888da5;
+                                font-weight: normal;
+                                color: white;
+                            }
+                        }
+                        tbody, tr, th, td {
+                            display: block;
+                            padding: 0;
+                            text-align: left;
+                            white-space: normal;
+                        }
+                        th, td {
+                            padding: 10px;
+                            vertical-align: middle;
+                        }
+                        tbody {
+                            tr {
+                                margin-bottom: 15px;
+                                position: relative;
+                            }
+                            td {
+                                border: 1px solid #888da5;
+                                font-size: 13px;    
+                                background: $white;
+                                margin-bottom: 15px;
+                                .times { 
+                                    &-item {
+                                        &-tools {
+                                            transform: translate(0, -50%);
+                                            display: flex;
+                                            right: 10px;
+                                            i {
+                                                font-size: 20px;
+                                                margin-left: 5px;
+                                            }
+                                        }
+                                    }
+                                    &-add {
+                                        padding: 10px;
+                                        font-size: 16px;
+                                        i {
+                                            display: block;
+                                        }
+                                    }
+                                    &-times {
+                                        padding: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .nav {
+                    &-tabs {
+                        border: none;
+                        >li {
+                            border: 1px solid $border-color !important;
+                            background: $white;
+                            a {
+                                border: none;
+                                background: transparent;
+                            }
+                            i {
+                                color: $facebook-color;
+                            }
+                            &.active {
+                                background: $gradient-blue;
+                                i {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-item {
+                    padding: 15px;
+                    background: $white;
+                    border: 1px solid $border-color;
+                    box-shadow: $box-shadow;
+                    color: #999;
+                    border-radius: 5px;
+                    position: relative;
+                    transition: .5s border-color ease;
+                    &:hover {
+                        border-color: $facebook-color;
+                    }
+                    &:after {
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        font-size: 0;
+                        height: 0;
+                        line-height: 0;
+                        visibility: hidden;
+                    }
+                    &-img {
+                        width: 100px;
+                        height: 100px;
+                        margin-right: 10px;
+                        border: 1px solid $border-color;
+                        float: left;
+                    }
+                    &-detail {
+                        width: calc(100% - 110px);
+                        float: left;
+                    }
+                    &-time {
+                        background: $gradient-blue;
+                        position: absolute;
+                        top: 10px;
+                        left: -10px;
+                        color: $white;
+                        padding: 10px 15px;
+                        width: 180px;
+                        font-weight: 500;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 10px;
+                            height: 10px;
+                            border-style: solid;
+                            border-width: 5px;
+                            border-color: #395489 #395489 transparent transparent;
+                        }
+                    }
+                    &-tools {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        text-align: right;
+                        i {
+                            font-size: 18px;
+                            margin-left: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &-filter {
+                    .input-group {
+                        &-addon {         
+                            background: $white;
+                            border-right: none;
+                            padding: 7px 0 7px 7px;
+                            i {
+                                font-size: 18px;
+                                color: #999;
+                            }
+                        }
+                        input {
+                            background: $white;
+                            border-left: none;
+                            padding-left: 5px;
+                            &:focus {
+                                border-color: transparent !important;
+                            }
+                        }
+                    }
+                }
+                &-notime {
+                    .fb-body-cont-item {
+                        &.border-blue {
+                            border-left: 3px solid $facebook-color;
+                        }
+                        &.border-red {
+                            border-left: 3px solid $danger;
+                            &:hover {
+                                border-left: 3px solid $danger !important;
+                                border: 1px solid $danger;
+                            }
+                        }
+                        &-img {
+                            width: 100px;
+                            height: 100px;
+                            margin-right: 10px;
+                            border: 1px solid $border-color;
+                            float: left;
+                        }
+                        &-detail {
+                            width: calc(100% - 200px);
+                            float: left;
+                        }
+                        &-tools {
+                            width: 80px;
+                            margin-left:10px;
+                            float: left;
+                            i {
+                                font-size: 18px;
+                                margin-left: 5px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .template_post {
+                    margin-bottom: 15px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid #dadada;
+                    display: none;
+                }
+            }
+        }
+        &-modal {
+            &-post {
+                .modal {
+                    &-content {
+                        padding: 0;
+                        border: none;
+                    }
+                    &-header {
+                        padding: 10px 15px !important;
+                        color: $white;
+                        border: none;
+                        background: $gradient-blue;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        div {
+                            margin-right: auto;
+                            font-size: 18px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+                        a{
+                            margin-left: auto;
+                            color: $white;
+                        }
+                    }
+                    &-body {
+                        padding: 15px !important;
+                        background: #ecf0f5;
+                    }
+                }
+            }
+        }
+        &-preview {
+            &-head {
+                display: flex;
+                align-items: center;
+                &-img {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $border-color;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                span {
+                    width: calc(100% - 50px);
+                    margin-left: 10px; 
+                }
+            }
+            &-nav {
+                border-bottom: 1px solid #dadada;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                a {
+                    color: #333;
+                    font-weight: 500;
+                    i {
+                        background: $warning;
+                        color: $white;
+                        border-radius: 50%;
+                        padding: 3px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            &-cont {
+                color: #000;
+                &-img {
+                    &:after {
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        font-size: 0;
+                        height: 0;
+                        line-height: 0;
+                        visibility: hidden;
+                    }
+                    &-col {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        max-width: 100%;
+                        float: left;
+                        border: 1px solid $border-color;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            max-width: 100%;
+                            object-fit: cover;
+                            object-position: top;
+                        }
+                        &-1 {
+                            width: 100%;
+                            height: 250px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                        &-2 {
+                            width: 50%;
+                            height: 300px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                        &-2_d {
+                            width: 50%;
+                            height: 166px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                        &-3 {
+                            width: 33.33%;
+                            height: 166px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                        &-more {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background: rgba(0, 0, 0, 0.55);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span {
+                                color: $white;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal-post {
+        &-content {
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 0;
+                box-shadow: none;
+                resize: none;
+                border-bottom: none;
+                &:focus {
+                    border-color: #dadada !important;
+                }
+            }
+            &-tools {
+                border-top: 0 !important;
+                border: 1px solid #dadada;
+                padding: 10px;
+                background: $white;
+                &.no-border {
+                    background: transparent;
+                }
+                &:after {
+                    clear: both;
+                    content: ".";
+                    display: block;
+                    font-size: 0;
+                    height: 0;
+                    line-height: 0;
+                    visibility: hidden;
+                }
+                &-btn {
+                    >a {
+                        color: #999;
+                        margin-right: 5px;
+                        transition: 0.3s all ease;
+                        &:hover {
+                            color: $facebook-color;
+                        }
+                    }
+                    .dropdown {
+                        display: inline-block;
+                        >ul {
+                            width: 200px;
+                            padding: 5px;
+                            >li {
+                                padding: 5px;
+                                cursor: pointer;
+                                i {
+                                    font-size: 21px;
+                                    margin-right: 5px;
+                                }
+                                &:hover {
+                                    background: #ecf0f5;
+                                }
+                            }
+                            &.datepicker {
+                                width: 550px;
+                                right: 0;
+                                left: auto;
+                                padding: 0;
+                                .modal-post-content-option {
+                                    border:none;
+                                    &-wrap {
+                                        margin: 0;
+                                        border:none;
+                                    }
+                                }
+                            }
+                        }
+                        .btn-default {
+                            >i {
+                                font-size: 21px;
+                                margin-right: 5px;
+                            }
+                            a {
+                                color: #333;
+                            }
+                        }
+                    }
+                    &:last-child {
+                    margin-left: auto; 
+                    }
+                }
+            }
+            &-option {
+                text-align: right;
+                text-transform: uppercase;
+                border-top: 1px solid #777;
+                &-wrap {
+                    background: $white;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border: 1px solid #dadada;
+                    &:after {
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        font-size: 0;
+                        height: 0;
+                        line-height: 0;
+                        visibility: hidden;
+                    }
+                    &-datepicker {
+                        width: 230px;
+                        float: left;
+                        padding: 5px 10px;
+                        border-right: 1px solid #ccc;
+                        .ui-datepicker {
+                            &-inline {
+                                width: 100%;
+                                background: transparent;
+                                border: none;
+                            }
+                            &-header {
+                                background: transparent;
+                                border: none;
+                            }
+                            &-title {
+                                font-weight: 400;
+                                font-size: 15px;
+                                color: #777;
+                            }
+                            th {
+                                font-weight: 500;
+                                font-size: 12px;
+                            }
+                            td {
+                                .ui-state {
+                                    &-active {
+                                        border: transparent !important;
+                                        background: $gradient-blue !important;
+                                        color: $white !important;
+                                        border-radius: 50%;
+                                        padding: 4px;
+                                    }
+                                    &-default {
+                                        border: none;
+                                        background: transparent;
+                                        font-weight: 400;
+                                        color: #777;
+                                        text-align: center;
+                                        padding: 4px;
+                                    }
+                                    &-hover {
+                                        border: none;
+                                        background: transparent;
+                                        font-weight: 400;
+                                        color: $facebook-color;
+                                        text-align: center;
+                                        padding: 4px;
+                                    }
+                                    &-highlight {
+                                        border: transparent;
+                                        background: #999;
+                                        color: $white;
+                                        border-radius: 50%;
+                                        padding: 4px;
+                                    }
+                                }
+                            }
+                            &-next {
+                                &-hover {
+                                    background: transparent;
+                                    border: none;
+                                    font-weight: 500;
+                                }
+                                .ui-icon {
+                                    background: transparent;
+                                    position: relative;
+                                    &:before {
+                                        font-family: "FontAwesome";
+                                        content: "\f105";
+                                        display: inline-block;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        color: #777;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+                            &-prev {
+                                &-hover {
+                                    background: transparent;
+                                    border: none;
+                                    font-weight: 500;
+                                }
+                                .ui-icon {
+                                    background: transparent;
+                                    position: relative;
+                                    &:before {
+                                        font-family: "FontAwesome";
+                                        content: "\f104";
+                                        display: inline-block;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        color: #777;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-time {
+                        width: calc(100% - 230px);
+                        height: 220px;
+                        float: left;
+                        text-align: left;
+                        &-chose {
+                            height: calc(100% - 23px);
+                            overflow: hidden auto;
+                            padding: 10px;
+                            &-item {
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid $border-color;
+                                select {
+                                    width: 50px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-item {
+            padding: 15px;
+            background: $white;
+            border-top: 3px solid $primary !important;
+            border: 1px solid #ebebeb;
+        }
+    }
+}
+

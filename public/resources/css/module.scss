@@ -1,0 +1,68 @@
+@import "sass/static/_author.scss";
+//import font
+@import "sass/static/_font.scss";
+// mixin
+@import "sass/static/_mixin.scss";
+// import color variable
+@import "sass/static/_variables.scss";
+// import animation
+@import "sass/static/_animation.scss";
+// import style for plugin
+@import "sass/static/_plugin.scss";
+@import "sass/static/_btn.scss";
+// custom class
+@import "sass/static/_class.scss";
+// default variables
+@import "sass/static/_default.scss";
+// custom style
+@import "sass/partial/_body.scss";
+@import "sass/partial/_header.scss";
+@import "sass/partial/_wrapper.scss";
+@import "sass/partial/_modal.scss";
+@import "sass/partial/_card_box.scss";
+@import "sass/partial/_common.scss";
+@import "sass/partial/_breadcrumb.scss";
+@import "sass/partial/_sticky.scss";
+@import "sass/partial/_checkbox-radios.scss";
+@import "sass/partial/_table.scss";
+@import "sass/partial/_report_chart.scss";
+@import "sass/partial/_report_list.scss";
+@import "sass/partial/_search_animation.scss";
+@import "sass/partial/_step_wizard.scss";
+@import "sass/partial/_sidebar_left.scss";
+@import "sass/partial/_manager_inbox.scss";
+@import "sass/partial/_chat_message.scss";
+@import "sass/partial/_comment_facebook.scss";
+@import "sass/partial/_footer.scss";
+@import "sass/partial/_sidebar_fixed_left.scss";
+@import "sass/partial/_form_element.scss";
+
+@import "sass/partial/_responsivetables.scss";
+@import "sass/partial/_profile.scss";
+@import "sass/partial/_timeline.scss";
+@import "sass/partial/_social.scss";
+@import"sass/partial/_table_print.scss";
+@import "sass/partial/_treeview.scss";
+
+@import "sass/partial/_gallery.scss";
+@import "sass/partial/_setting.scss";
+@import "sass/partial/_van.scss";
+@import "sass/partial/_mobile_version.scss";
+@import "sass/partial/_hieu.scss";
+
+
+//scss của facebook app
+@import "sass/facebook/_fb_general.scss";
+@import "sass/facebook/_fb_login.scss";
+@import "sass/facebook/_fb_chose_page.scss";
+@import "sass/facebook/_fb_sidebar.scss";
+@import "sass/facebook/_fb_user_list.scss";
+@import "sass/facebook/_fb_conversation.scss";
+@import "sass/facebook/_fb_order.scss";
+@import "sass/facebook/_fb_report.scss";
+@import "sass/facebook/_fb_setting.scss";
+@import "sass/facebook/_fb_modal.scss";
+@import "sass/facebook/_fb_step2.scss";
+@import "sass/facebook/_fb_responsive_table.scss";
+@import "sass/facebook/_fb_right_click.scss";
+@import "sass/facebook/_fb_guide.scss";

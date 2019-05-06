@@ -1,0 +1,38 @@
+.container, .container-fluid {
+  width: 90%;
+}
+@media (max-width: 1366px) {
+	.container, .container-fluid {
+		width: 96%;
+	}
+}
+@media (max-width: 1200px) {
+	.container, .container-fluid {
+		width: 100%;
+	}
+}
+.page-title {
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-top: 0;
+  @include font-page($font-Roboto-Medium);
+}
+a{
+  cursor: pointer;
+}
+.scrollup {
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  display: none;
+  text-align: center;
+  line-height: 52px;
+  z-index: 9999999;
+  text-shadow: 0px 1px 1px #000000;
+  span {
+    font-size: 46px;
+    color: #989898;
+  }
+}

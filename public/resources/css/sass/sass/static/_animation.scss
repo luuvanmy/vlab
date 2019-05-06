@@ -1,0 +1,36 @@
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.spinning {
+  transform-origin: 48% 50%;
+}
+@keyframes rippleOn {
+   0% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 0;
+      transform: scale(10,10);
+   }
+}
+@keyframes rippleOff {
+   0% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 0;
+      transform: scale(10,10);
+   }
+}
+
+.animation-fade-in{
+   animation: fadeIn 0.5s ;
+}

@@ -1,0 +1,66 @@
+
+
+
+.print-bill{
+    font-size: 14px;
+    .info-company{
+        p{
+           
+            font-size: 14px;
+        }
+        @media print {
+           p{
+            font-size: 12pt;
+           } 
+        }
+    }
+    h2{
+        font-size: 18pt;
+    }
+    hr{
+        margin: 0 0 15px;
+        border-top: 1px dashed #526377;
+    }
+}
+
+.table-print{
+    @include font-page($font-Roboto-normal);
+    font-size: 14px;
+    thead{
+        background: transparent !important;
+        border: none !important;
+        th{
+            border: none !important;
+        }
+    }
+    tbody{
+        border: none !important;
+        border-top: 1px dashed #526377 !important;
+        border-bottom: 1px dashed #526377 !important;
+      
+    }
+    tfoot{
+        border: none !important
+    }
+    th,td{
+        background:transparent !important;
+        border-top: none !important;
+        @include font-page($font-Roboto-normal);   
+         padding:3px 5px!important;
+    }
+    tbody >tr:first-child,tfoot >tr:first-child{
+        td{
+            padding-top: 10px!important;
+        }
+    }
+    tbody >tr:last-child{
+        td{
+            padding-bottom: 10px!important;
+        }
+    }
+}
+@media print {
+    .table-print,.print-bill{
+        font-size: 12pt;
+    }
+}

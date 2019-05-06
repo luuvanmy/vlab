@@ -1,0 +1,676 @@
+$height-heading:54px;
+$wid-users:300px;
+.card-box {
+  width: 100%;
+}
+
+.sidebar-content {
+  border-bottom: 1px solid $border-color;
+}
+
+.custom-search-input {
+  margin: 0;
+  padding: 10px;
+  background: #ecf0f5;
+  border-bottom: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  .fa-search {
+    position: absolute;
+    z-index: 11;
+    line-height: 34px;
+    padding: 0 10px;
+  }
+  .txt-search {
+    padding-left: 30px;
+  }
+}
+
+.manager-inbox {
+  float: left;
+  width: $wid-users;
+  .nav-tabs {
+    border-right: 1px solid #ddd;
+    li {
+      width: 50%;
+      &.active {
+        a {
+          border-top-color: transparent;
+        }
+      }
+      a {
+        text-align: center;
+        border-radius: 0;
+        padding: 10px 0px;
+        .fa {
+          width: 20px;
+        }
+        span {
+          position: relative;
+          display: inline-block;
+          .badge {
+            position: absolute;
+            right: -15px;
+            top: -8px;
+            font-size: 10px;
+            z-index: 1;
+          }
+          @media(max-width: 440px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    padding: 0;
+    float: left;
+    width: 100%;
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    .tab-pane {
+      float: left;
+      width: 100%; // border-bottom: 1px solid $border-color;
+      .list-comments {
+        float: left;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+        .item-comment {
+          padding: 10px;
+          padding-bottom: 0;
+          float: left;
+          width: 100%;
+          transition: $trans;
+          border-bottom: 1px dashed #ededed;
+          position: relative;
+          &.active {
+            background: #f3f3f2;
+            .name {
+              color: #365899 !important;
+            }
+            .date {}
+            &:hover {
+              background: #f2f1f1;
+            }
+          }
+          .badge {
+            position: absolute;
+            left: 30px;
+            top: 6px;
+            font-size: 10px;
+            z-index: 1;
+          }
+          &:hover {
+            background: #fafafa;
+          }
+          .img-post {
+            float: left;
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              max-width: 100%;
+              float: left;
+            }
+          }
+          .content-item {
+            float: left;
+            width: calc(100% - 40px);
+            .label {
+              font-size: 10px;
+              border-radius: 3px !important;
+              padding: 2px 5px;
+            }
+            .name {
+              color: $text;
+              @include font-page($font-Roboto-bold);
+            }
+            .des {
+              @include clamp-line(1);
+            }
+            .date {
+              font-size: 12px;
+              color: #777;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.manager-fanpage-user {
+  float: left;
+  width: calc(100% - 300px);
+  padding: 10px;
+  .btn-choose-fanpage {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    z-index: 1;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid #44aa3b !important;
+    border-radius: 25px !important;
+    box-shadow: 0 1px 2px #282828;
+    background: -moz-linear-gradient(top, rgba(97, 192, 90, 1) 0%, rgba(63, 143, 56, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(97, 192, 90, 1)), color-stop(100%, rgba(63, 143, 56, 1)));
+    background: -webkit-linear-gradient(top, rgba(97, 192, 90, 1) 0%, rgba(63, 143, 56, 1) 100%);
+    background: -o-linear-gradient(top, rgba(97, 192, 90, 1) 0%, rgba(63, 143, 56, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(97, 192, 90, 1) 0%, rgba(63, 143, 56, 1) 100%);
+    background: linear-gradient(to bottom, rgba(97, 192, 90, 1) 0%, rgba(63, 143, 56, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61c05a', endColorstr='#3f8f38', GradientType=0);
+  }
+  .responsive-info-user {
+    display: inline-block;
+  }
+  .group-info-user {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    #info-user {
+      display: none;
+    }
+    .nav {
+      border: 1px solid #ddd;
+      background: #ecf0f5;
+      visibility: inherit;
+      opacity: 1;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      li {
+        &:first-child.active a {
+          border-left-color: transparent;
+        }
+        &.active {
+          a {
+            border-top-color: transparent;
+          }
+        }
+      }
+    }
+    .tab-content {
+      float: left;
+      width: 100%;
+      padding: 0;
+      border: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      border-top-color: transparent;
+      .tab-pane {
+        // float: left;
+        width: 100%;
+        &.active {
+          // display:block;
+        }
+        .close {
+          position: absolute;
+          right: 0;
+          float: right;
+          width: 30px;
+          height: 30px;
+          color: red;
+          background: #ddd;
+          opacity: 1;
+          visibility: visible;
+          display: none;
+          span {
+            visibility: visible;
+          }
+        }
+      }
+      .info-user {
+        padding: 15px 0 0;
+        .content-user {
+          display: block;
+          padding: 0;
+          margin-top: 15px;
+          border-top: 1px solid $border-color;
+          li {
+            border-bottom: 1px solid $border-color;
+            clear: both;
+            display: block;
+            padding: 10px;
+            &:last-child {
+              border-bottom: 1px solid transparent;
+            }
+            .panel-warning {
+              background: transparent !important;
+              border: 1px solid transparent !important;
+              max-height: 340px;
+              overflow: hidden;
+              overflow-y: auto;
+              >.panel-heading {
+                background-color: #fcf8e3;
+                border: 1px solid #eae6d2 !important;
+                margin-bottom: 10px;
+                border-radius: 3px;
+                .panel-title {
+                  font-weight: normal;
+                }
+              }
+            }
+            .employer {
+              float: left;
+              width:100%;
+              .employer-media {
+                float: left;
+                width: 45px;
+              }
+              .employer-info {
+                float: left;
+                width: calc(100% - 45px);
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 5px;    text-align: left;
+              }
+            }
+            }
+        }
+        .img-post {
+          display: inline-block;
+          height: 50px;
+          width: 50px;
+          margin-right: 5px;
+          border: none;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+      .info-orders {
+        padding: 15px;
+        width: 100%;
+        .table-mobile {
+          width: 100%;
+          display: block;
+        }
+        thead {
+          tr {
+            th {
+              text-align: center;
+              &:first-child {
+                text-align: left;
+              }
+            }
+          }
+        }
+        tbody,
+        tfoot {
+          tr {
+            td {
+              text-align: right;
+              border-right: 1px solid $border-color;
+              &:first-child {
+                text-align: left;
+              }
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+        }
+        tfoot {
+          tr {
+            td {
+              &:first-child {
+                // text-align: right;
+              }
+              text-align: right;
+              @include font-page($font-Roboto-bold);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media(max-width:1650px) and (min-width:1366px){
+//   padding: 0 5px;
+// }
+@media(max-width:1366px) {
+  .manager-fanpage-user {
+    position: relative;
+    >.responsive-info-user,
+    >.chats {
+      width: 100%;
+    }
+    .responsive-info-user {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: initial;
+      z-index: 2;
+    }
+  }
+}
+
+@media(max-width:1366px) {
+  .manager-fanpage-user {
+    .chats {
+      padding: 0;
+    }
+    .responsive-info-user {
+      padding: 0;
+      bottom: 0;
+      z-index: 12;
+      .group-info-user {
+        #info-user {
+          display: none;
+        }
+        .dropdown {
+          position: relative;
+          right: 0;
+          bottom: -8px;
+          left: 0;
+          width: 100%;
+          .nav {
+            display: inline-block;
+            width: 100%;
+            border: none;
+            border-top: 1px solid #ddd;
+            li {
+              width: auto;
+              &.active {
+                border-left: 0px solid #4488e4;
+                border-bottom: 3px solid #4488e4;
+              }
+            }
+          }
+        }
+        .tab-content .tab-pane {
+          position: fixed;
+          width: 0;
+          height: 0;
+          border: 5px solid #ddd;
+          box-shadow: 0 3px 10px #7d7d7d;
+          background: #fff;
+          opacity: 0;
+          z-index: -1;
+          overflow: hidden;
+          overflow-y: auto;
+          border-left: 1px solid $border-color;
+          transition: $trans;
+          &.active {
+            opacity: 1;
+            width: initial;
+            height: initial;
+            top: 80px;
+            left: 80px;
+            z-index: 1000;
+            bottom: 80px;
+            right: 80px;
+            @media(max-width: 768px) {
+              left: 20px;
+              z-index: 1000;
+              bottom: 20px;
+              right: 20px;
+            }
+            .close {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#fix-fanpage {
+  position: relative;
+  width: initial;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0px;
+  @media(max-width: 440px) {
+    min-height: 400px;
+  }
+  .page-login-book {
+    position: absolute;
+    background: #f3f8fb;
+    border: 1px solid #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .img-left {
+      height: 100%;
+      background: url('../images/logo/img_left_fanpage.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    img.img-responsive {
+      width: 100%;
+      margin: 0 auto;
+      @media only screen and (max-device-width: 768px) and (orientation: landscape) {
+        display: none;
+        &.bg-landscape {
+          position: absolute;
+          z-index: -1;
+          bottom: 0;
+          height: 100%;
+          opacity: 0.5;
+        }
+      }
+      &.max-width-250 {
+        width: 50% !important;
+      }
+    }
+    .box-login {
+      position: relative;
+      height: 100%;
+      .form-connect {
+        position: absolute;
+        width: 100%;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 15px 0;
+        .title {
+          text-transform: uppercase;
+          color: #24315d;
+          font-weight: bold;
+          text-align: center;
+          margin: 30px auto;
+          width: 80%;
+          @media(max-width: 420px) {
+            font-size: 14px;
+          }
+        }
+        .btn-login-facebook {
+          background-color: #3c5a98 !important;
+          border: 1px solid #203d7e !important;
+          color: #fff;
+          padding: 14px 20px;
+          border-radius: 30px !important;
+          margin-bottom: 30px;
+          &:hover {
+            background-color: #4265bd !important;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-wrapper {
+    height: 100%;
+    .sidebar-left,
+    .sidebar-content {
+      height: 100%;
+      width: 100%;
+      .manager-inbox {
+        height: 100%;
+        .tab-content {
+          height: calc(100% - 126px);
+          overflow: hidden;
+          overflow-y: auto;
+          border-right: 1px solid $border-color;
+        }
+      }
+      .manager-fanpage-user {
+        height: 100%;
+        .chats {
+          height: calc(100% - 60px);
+          @media(min-width: 1366px) {
+            height: 100%;
+          }
+          .group-chat,
+          .chat_window {
+            height: 100%;
+          }
+          .group-chat {
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            overflow: hidden;
+          }
+          .messages {
+            height: calc(100% - 120px);
+            overflow: hidden;
+            overflow-y: auto; // max-height: inherit;
+          }
+        }
+        .responsive-info-user {
+          @media(min-width: 1366px) {
+            height: 100% !important;
+          }
+          .group-info-user {
+            height: 100%;
+            padding-bottom: 54px;
+            .tab-content {
+              height: calc(100% - 43px);
+              overflow: hidden;
+              overflow-y: auto;
+            }
+          }
+        }
+        .chats,
+        .responsive-info-user {
+          .bottom_wrapper {
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            right: 0px;
+            padding: 5px;
+            padding-bottom: 0;
+            border-left: 0;
+            border-top: 1px solid #ddd;
+            width: inherit;
+            background-color: #fff;
+            border: 1px solid $border-color;
+            @media(max-width: 1366px) {
+              left: 0px;
+              border-left: 1px solid $border-color;
+            }
+            .message_input_wrapper {
+              display: inline-block;
+              height: 50px;
+              border-radius: 25px;
+              border: 1px solid #bcbdc0;
+              width: calc(100% - 160px);
+              position: relative;
+              padding: 0 20px;
+              @media(max-width: 768px) {
+                width: calc(100% - 80px);
+                height: 34px;
+                line-height: 34px;
+              }
+              .message_input {
+                position: relative;
+                float: left;
+                border: none;
+                height: 100%;
+                box-sizing: border-box;
+                outline-width: 0;
+                color: gray;
+                width: 100%;
+              }
+            }
+            .send_message {
+              width: 140px;
+              height: 50px;
+              line-height: 48px;
+              display: inline-block;
+              border-radius: 50px;
+              background-color: #a3d063;
+              border: 2px solid #a3d063;
+              color: #fff;
+              cursor: pointer;
+              transition: all 0.2s linear;
+              text-align: center;
+              float: right;
+              @media(max-width: 768px) {
+                width:70px;
+                height: 34px;
+                line-height: 34px;
+              }
+              &:hover {
+                color: #a3d063;
+                background-color: #fff;
+              }
+              .fa {
+                font-size: 20px;
+                width: 32px;
+                margin-left: -10px;
+                pointer-events: none;
+                @media(max-width: 768px) {
+                  font-size: 11px;
+                  width: 18px;
+                }
+              }
+              .text {
+                font-size: 18px;
+                font-weight: 300;
+                display: inline-block;
+                pointer-events: none;
+                @media(max-width: 768px) {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  #fix-fanpage .sidebar-wrapper .sidebar-left,
+  #fix-fanpage .sidebar-wrapper .sidebar-content {
+    overflow-y: auto;
+    .manager-inbox {
+      height: unset;
+      margin-bottom: 15px;
+      .tab-content {
+        height: inherit;
+        .tab-pane {
+          .list-comments {
+            height: 275px;
+            overflow: hidden;
+            overflow-y: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .manager-inbox,
+  .manager-fanpage-user {
+    width: 100%;
+    .group-info-user .nav li a {
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+    }
+  }
+  .sidebar-wrapper .sidebar-content .heading-group {
+    line-height: 34px;
+  }
+}

@@ -1,0 +1,92 @@
+.user-profile{
+  .box-upload-image{border:1px dashed #ccc;padding:0;text-align:center;background: #f3f3f3;width: 100%;}
+  .box-upload-image .label{padding: 43px 30px;display: block;}
+  .box-upload-image .fa-picture-o{font-size:100px;margin:0px auto;display:block;text-align:center;color:#ccc;}
+  .box-upload-image p{color:#999;    white-space: normal;}
+  .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #299ad5;
+  }
+  .info{
+    float: left;
+    padding:10px;
+    border: 1px solid #bce1f1;
+    background:#ebf6fa url('../images/customers/bg-profile.jpg') top right no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    @media(max-width:540px){
+      font-size: 14px;
+    }
+  }
+  .group-image{
+    max-width: 300px;
+    margin: 0 auto;
+    .btn{
+      width: 100%;
+      padding: 5px;
+      background: #f2fafd;
+      border: 1px solid #d3ebf7;
+      color: #7f7f7f;
+      box-shadow: inset 0 0px 1px #fff;
+    }
+  }
+  .link{
+    background: #f6efe9;
+    padding: 3px 10px;
+    border: 1px solid #f6b07c;
+    display: inline-block;
+    border-radius: 3px;
+  }
+  .block-title {
+    background-color: #f9fafc;
+    border-bottom: 1px solid #eaedf1;
+    padding:5px 10px;
+    h2,h3{
+      font-size: 18px;
+    }
+  }
+  .nav-tabs {
+    position:absolute;
+    bottom:-1px;
+    right:0;
+    border-bottom: transparent;
+    font-size: 13px;
+    > li{
+      > a{
+        font-weight:normal;
+        color: #6d6d6d;
+      }
+      &.active{
+        a, a:focus, a:hover{
+          color:$text;
+          background-color: #f9fafc;
+          border-color: #bce2f2;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+  .tab-content {
+    padding: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    .tab-pane{
+      padding-top: 10px;
+      border-top: 10px solid #f9fafc;
+      box-shadow: inset 0 1px 0 #f5f5f5;
+    }
+  }
+  @media (max-width: 520px) {
+    .nav-tabs{
+      width:100%;
+      white-space: nowrap;
+      overflow: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      > li {
+        float: none !important;
+        display: inline-block;
+      }
+    }
+  }
+}

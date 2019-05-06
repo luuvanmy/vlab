@@ -1,0 +1,62 @@
+$height-search: 36px;
+.box-search{
+  width:100%;
+  display: inline-block;
+  position: relative;
+  height: $height-search;
+  float: right;
+  padding: 0;
+  position: relative;
+ 
+  .txt-search{
+    height: $height-search;
+    display: inline-block;
+    font-weight: 100;
+    border: none;
+    outline: none;
+    color: #555;
+    padding: 3px;
+    padding-right: 60px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+    &:focus {
+      max-width: 600px;
+     width: 260px;
+      z-index: 1;
+      border-bottom: 1px solid #4488e4;
+      cursor: text;
+    }
+  
+  }
+  .btn-search{
+      height: $height-search;
+      padding:8px;
+      width: 46px;
+      display: inline-block;
+      color:red;
+      float: right;
+      background:#4488e4  url('../images/icons/ic_search.png') center center no-repeat;
+      text-indent: -10000px;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      opacity:1;
+      border-radius:0px;
+      transition: opacity .4s ease;
+      cursor: pointer;
+      outline:none;
+      &:focus,&:hover {
+    // &+.txt-search{
+    //   width: 260px;
+    // }
+      }
+  }
+}

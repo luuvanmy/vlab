@@ -1,0 +1,125 @@
+.manage-promotion,.manage-setting {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  .promotion-right,
+  .promotion-left,
+  .setting-right,
+  .setting-left {
+    float: left;
+  }
+  .promotion-left, .setting-left {
+    padding: 20px;
+    color: #fff;
+    > ul{
+      list-style: none;
+      padding:0;
+      > li{    list-style: none;
+        > a{
+          display: flex;
+          align-items: center;
+          padding:5px 0;
+          color: $text;
+          > .number{
+            width: 24px;
+            height: 24px;
+            background: #d43f3a;
+            display: inline-block;
+            border-radius: 50%;
+            color: #fff;
+            float: left;
+            line-height: 24px;
+            text-align: center;
+            margin-right: 10px;
+          }
+
+        }
+        ul{
+          li{
+            a{    color: $text;
+              display: block;
+                  padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* The sticky */
+
+ .manage-setting .row div::first-child {  
+    background: #fff;
+    z-index: 10;
+   }
+
+  .promotion-left,.setting-left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px !important;
+    z-index: 10;
+    @media(max-width:992px){
+      width:100%;
+      background: #fff;
+      z-index: 10;
+      border-bottom: 1px solid $border-color;
+      li{
+        width:50%;
+        float:left;
+      }
+    }
+    @media(max-width:440px){
+      li{
+        width:100%;
+      }
+    }
+  }
+
+  .promotion-right,.setting-right{
+    .header-title{
+      padding: 15px;
+      background: #fafafa;
+    }
+    .well-title{
+      .number{
+        width: 24px;
+        height: 24px;
+        background: $red;
+        display: inline-block;
+        border-radius: 50%;
+        color: #fff;
+        float: left;
+        line-height: 24px;
+        text-align: center;
+        margin-right: 10px;
+      }
+    }
+    .form-horizontal{
+      .block-daterange{
+        cursor: pointer;
+        width:100%;
+        .btn{
+              position: absolute;
+              pointer-events: none;
+        }
+        input{
+          padding-left:50px;
+        }
+      }
+      .col-lg-6.col-md-9.col-sm-12{
+        @media(max-width:1366px){
+          width: 75%;
+        }
+        @media(max-width:992px){
+          width:100%;
+        }
+
+
+      }
+      .col-sm-9.border-left{
+        @media(max-width:992px){
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}

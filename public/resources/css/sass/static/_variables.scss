@@ -1,0 +1,75 @@
+$text: #666f7b;
+$body: #ecf0f5;
+$light-body: #fafafa;
+$text-gray:#666f7b;
+$theme-color: #4488e4;
+$primary: rgb(33, 150, 243);
+$success: rgb(76, 175, 80);
+$info: rgb(26, 185, 167);
+$danger: rgb(229, 28, 35);
+$warning: rgb(255, 152, 0);
+$black: #292b2c;
+$gray: #b0bec5;
+$dark: #e2e2e2;
+$blue: #165094;
+$light-blue: #1b75bc;
+$light-success: lighten($success, 30%);
+$light-primary: lighten($primary, 20%);
+$light-warning: lighten($warning, 20%);
+$light-danger: lighten($danger, 20%);
+$light-info: lighten($info, 50%);
+$box-shadow:0px 1px 2px #eee;
+$border-radius:5px;
+$border-color: #ddd;
+$mg-bottom:15px;
+$trans: all ease 0.5s;
+$trans-menu: all ease 0.2s;
+/* font variable */
+
+$font-Roboto-normal:'Roboto';
+$font-Roboto-bold:'Roboto-Bold';
+$font-Roboto-Black:'Roboto-Black';
+$font-Roboto-BoldItalic:'Roboto-BoldItalic';
+$font-Roboto-Italic:'Roboto-Italic';
+$font-Roboto-Light:'Roboto-Light';
+$font-Roboto-Medium:'Roboto-Medium';
+$custom: #64c5b1;
+// Color variables
+$white: #ffffff;
+$red: #d43f3a;
+$default: #dae6ec;
+$primary: #4489e4;
+$success: #32c861;
+$info: #34d3eb;
+$warning: #ffa91c;
+$danger: #f96a74;
+$purple: #5553ce;
+$pink: #ec6794;
+$inverse: #36404c;
+$muted: #98a6ad;
+$light: #e2e2e2;
+$light3: #f3f3f3;
+$light7: #797979;
+$dark: #313a46;
+$lightdark : #f2f2f2;
+$bg-body: #f1f1f1;
+$shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06),
+0 1px 0 0 rgba(0, 0, 0, 0.02);
+//Background left-sidebar
+$bg-topbar: #343c49;
+// Width variables
+$width: 100%;
+// Height variables
+$height: 100%;
+//Font variables
+$font-primary: 'Open Sans',
+sans-serif;
+$font-secondary: 'Nunito Sans',
+sans-serif;
+//Font Base
+$font-size-base: 14px;
+
+$facebook-color: #4267b2;
+$facebook-border: #29487d;
+
+$gradient-blue: linear-gradient(45deg, rgba(66, 103, 178, 0.95), rgba(68, 137, 228, 0.95));

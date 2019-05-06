@@ -1,0 +1,688 @@
+.logo {
+      //    width: 270px;
+      display: block;
+      position: relative;
+      height: 60px;
+      overflow: hidden;
+      margin: 0;
+      a {
+            height: 60px;
+            img {
+                  height: 100%;
+            }
+      }
+}
+
+@media(max-width:419px) {
+      .topbar-main {
+            .container {
+                  padding: 0px 10px;
+                  .mobile-toggle {
+                        margin-right: 5px;
+                  }
+            }
+      }
+}
+
+
+
+#topnav .topbar-main {
+      @include box-shadow;
+      a{
+            cursor: pointer;
+      }
+      .navbar-custom {
+            box-shadow: none;
+      }
+      .mobile-toggle {
+            display: none;
+      }
+      .navigation-menu>li>a {
+            line-height: 17px;
+      }
+      .user-info-list {
+            img {
+                  width: 36px;
+                  height: 36px;
+            }
+      }
+      .mobile-trigger {
+            &.active{
+                  i {
+                        position: absolute;
+                        &:first-child {
+                              top: 6px;
+                              transform: rotate(45deg);
+                        }
+                        &:nth-child(2) {
+                              visibility: hidden;
+                        }
+                        &:last-child {
+                              width: 100%;
+                              top: 6px;
+                              transform: rotate(-45deg);
+                        }
+                  }
+            }
+      }
+}
+@media(max-width:992px){
+      #topnav > .topbar-main {
+            .mobile-toggle {
+                  display: block;
+                  float: right;
+                  .mobile-trigger {
+                        border: 0;
+                        position: relative;
+                        width: 60px;
+                        height: 60px;
+                        padding: 0;
+                        margin: 0;
+                        cursor: pointer;
+                        .line {
+                              width: 25px;
+                              display: block;
+                              position: relative;
+                              margin: 23px auto 17px auto;
+                              height: 18px;
+                              -webkit-transition: all .5s ease;
+                              transition: all .5s ease;
+                              i {
+                                    height: 2px;
+                                    width: 100%;
+                                    background-color: rgba(49, 58, 70, 0.8);
+                                    display: block;
+                                    margin-bottom: 5px;
+                                    -webkit-transition: -webkit-transform 0.5s ease;
+                                    transition: -webkit-transform 0.5s ease;
+                                    transition: transform .5s ease;
+                              }
+                        }
+                  }
+            }
+            .navbar-custom {
+                  position: fixed;
+                  top: 62px;
+                  left: -300px;
+                  width: 300px;
+                  bottom: 0px;
+                 
+                  transition: all 0.5s ease;
+                  overflow-x: hidden;
+                  overflow-y: auto;
+                  .navbar-container {
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        padding-bottom: 50px;
+                        display: block;
+                        border: none;
+                        background: transaprent;
+                        .navbar-right {
+                              width: 100%;
+                              float: none !important;
+                              .quick-sale{
+                                    display: block;
+                                    width: 100%;
+                                    a{
+                                          border-bottom: 1px solid #ddd; 
+                                          display: block;
+                                          line-height:17px;
+                                          padding:12px 10px ;
+                                          margin: 0;
+                                          width: 100%;
+                                          height: 50px;
+                                          background: #fff !important;
+                                          border-radius: 0;
+                                          color:#313a46;
+                                          font-weight: 500;
+                                          text-align: left;
+                                          i{
+                                                width: 24px;
+                                                height: 24px;
+                                                line-height: 24px;
+                                                font-size: 14px;
+                                                display: inline-block;
+                                                background: $success;
+                                                text-align: center;
+                                                border-radius: 50%;
+                                          }
+                                          span{
+                                                font-size: 13px;
+                                                text-transform: uppercase;
+                                          }
+                                    }
+                              }
+                              .navbar-c-items {
+                                    width: 100%;
+                                    float: none;
+                                    display: block;
+                                    position: static;
+                                    &.open{
+                                          .dropdown-menu{
+                                                
+                                          }
+                                          .dropdown-toggle{
+                                                &:before{
+                                                      transform: rotate(45deg);
+                                                }
+                                          }
+                                    }
+                                    >a {
+                                          height: 75px;
+                                    }
+                                    .dropdown-menu {
+                                          overflow: hidden;
+                                          max-height: 0;
+                                          transition: max-height 0.5s ease;
+                                          position: relative;
+                                          top: auto;
+                                          left: auto;
+                                          right: auto;
+                                          bottom: auto;
+                                          border-bottom: 1px solid #ddd;
+                                          box-shadow: none;
+                                          margin: 0;
+                                          padding: 0;
+                                          display: block;
+                                          transition: all 0.5s ease;
+                                          transform: none;
+                                          opacity: 1;
+                                          visibility: visible;
+                                          border: none;
+                                          >li {
+                                                display: block;
+                                                >a {
+                                                      padding: 10px 15px;
+                                                }
+                                          }
+                                    }
+                                    .dropdown-toggle {
+                                          width: 100%;
+                                          border-radius: 0;
+                                          margin: 0;
+                                          height: auto;
+                                          text-align: left;
+                                          height: 50px;
+                                          padding:0px 15px;
+                                          @include box-shadow;
+                                          display: flex;
+                                          flex-wrap: nowrap;
+                                          color:#313a46;
+                                          text-transform: uppercase;
+                                          font-size: 13px;
+                                          font-weight: 500;
+                                          img {
+                                                height: 35px;
+                                                width: 35px;
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                margin-top: 5px;
+                                                margin-right: 10px;
+                                          }
+                                          i{
+                                                font-size: 35px;
+                                                margin-right: 5px;
+                                                margin-bottom: 5px;
+                                                &:before{
+                                                      line-height: 45px;
+                                                }
+                                          }
+                                          span {
+                                                display: inline-block;
+                                                // float: left;
+                                                // padding-left: 5px;
+                                                vertical-align: middle;
+                                                line-height: 50px;
+                                                width: calc(100% - 60px);
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;
+                                                // overflow: hidden;
+                                                // font-size: 16px;
+                                                font-weight: 500;
+                                                font-size: 13px;
+                                          }
+                                          &:before {
+                                                // content: '\f107';
+                                                // right: 10px;
+                                                // top: 10px;
+                                                // font-family: fontawesome;
+                                                // position: absolute;
+                                                // transition: all 0.3s ease;
+                                                border-bottom: 1px solid #313a46;
+                                                border-right: 1px solid #313a46;
+                                                content: '';
+                                                display: block;
+                                                height: 8px;
+                                                width: 8px;
+                                                margin-top: -5px;
+                                                pointer-events: none;
+                                                position: absolute;
+                                                right: 15px;
+                                                top: 50%;
+                                                transform-origin: 66% 66%;
+                                                transform: rotate(-45deg);
+                                                transition: all 0.15s ease-in-out;
+                                          }
+                                    }
+                                    .user-name {
+                                          display: none;
+                                    }
+                                    &.open {
+                                          .dropdown-toggle {
+                                                &:before {
+                                                      // content: '\f0d8';
+                                                      // transform: rotate(180deg);
+                                                }
+                                          }
+                                          .dropdown-menu {
+                                                // display: block;
+                                                max-height: 1000px;
+                                                transition: max-height 1s linear;
+                                                border-bottom: 1px solid #ddd;
+                                          }
+                                    }
+                                    &.user-info-list{
+                                          .dropdown-toggle{
+                                                background: #fff !important;
+                                                box-shadow: none;
+                                                border-bottom: 1px solid #ddd;
+                                          }
+                                          .dropdown-menu{
+                                                // top: 100px;
+                                                // height: calc(100% - 100px);
+                                                .list-title{
+                                                      display: none;
+                                                }
+                                          }
+                                    }
+                                    &.service-info-list{
+                                          .dropdown-toggle{
+                                                background: #fff !important;
+                                                box-shadow: none;
+                                                border-bottom: 1px solid #ddd;
+                                          }
+                                          .dropdown-menu{
+                                                // top: 50px;
+                                                height: auto;
+                                                // height: calc(100% - 50px);
+                                          }
+                                    }
+                              }
+                              .notification-list {
+                                    display: none;
+                              }
+                              .navbar-c-items{
+                                    // display: none;
+                                    .user-list .user-list-item .icon, .user-list .user-list-item .avatar{
+                                          display: inline-block;
+                                    }
+                                    .list-title{
+                                          display: none;
+                                    }
+                              }
+                        }
+                        .navigation-menu {
+                              width: 100%;
+                              max-height: none;
+                              overflow-y: auto;
+                              overflow-x: hidden;
+                              >li {
+                                    display: block;
+                                    text-align: left;
+                                    position: relative;
+                                    >a{
+                                          border-bottom: 1px solid #ddd;
+                                          i,span {
+                                                display: inline-flex;
+                                                vertical-align: middle;
+                                          }
+                                    }
+                              }
+                              .has-submenu {
+                                    .submenu{
+                                          border-bottom: 1px solid #ddd;
+                                          position: relative;
+                                          top: auto;
+                                          left: auto;
+                                          bottom: auto;
+                                          right: auto;
+                                          display: none;
+                                          visibility: visible;
+                                          opacity: 1;
+                                          transition: none;
+                                    }
+                                    >a {
+                                          position: relative;
+                                          &:before {
+                                                border-bottom: 1px solid #313a46;
+                                                border-right: 1px solid #313a46;
+                                                content: '';
+                                                display: block;
+                                                height: 8px;
+                                                width: 8px;
+                                                margin-top: -5px;
+                                                pointer-events: none;
+                                                position: absolute;
+                                                right: 15px;
+                                                top: 50%;
+                                                transform-origin: 66% 66%;
+                                                transform: rotate(-45deg);
+                                                transition: all 0.15s ease-in-out;
+                                          }
+                                    }
+                                    &.is-opening {
+                                          >a {
+                                                &:before {
+                                                      transform: rotate(45deg);
+                                                }
+                                          }
+                                    }
+                              }
+                        }
+                  }
+            }
+            
+      }
+      &.menu-is-opening {
+            &:before {
+                  content: '';
+                  background: rgba(0, 0, 0, 0.3);
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 100;
+            }
+      }
+      .navbar-custom.active {
+            left: 0 !important;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+}
+@media(max-width:992px) {
+      .menu-is-opening {
+            &:before {
+                  content: '';
+                  background: rgba(0, 0, 0, 0.3);
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 100;
+            }
+      }
+      .navbar-custom.active {
+            left: 0;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+     
+}
+.mobile-version{
+      >#topnav > .topbar-main {
+            .mobile-toggle {
+                  display: block;
+                  float: right;
+                  .mobile-trigger {
+                        border: 0;
+                        position: relative;
+                        width: 60px;
+                        height: 60px;
+                        padding: 0;
+                        margin: 0;
+                        cursor: pointer;
+                        .line {
+                              width: 25px;
+                              display: block;
+                              position: relative;
+                              margin: 23px auto 17px auto;
+                              height: 18px;
+                              -webkit-transition: all .5s ease;
+                              transition: all .5s ease;
+                              i {
+                                    height: 2px;
+                                    width: 100%;
+                                    background-color: rgba(49, 58, 70, 0.8);
+                                    display: block;
+                                    margin-bottom: 5px;
+                                    -webkit-transition: -webkit-transform 0.5s ease;
+                                    transition: -webkit-transform 0.5s ease;
+                                    transition: transform .5s ease;
+                              }
+                        }
+                  }
+            }
+            .navbar-custom {
+                  position: fixed;
+                  top: 62px;
+                  left: -300px;
+                  width: 300px;
+                  bottom: 0px;
+                  transition: all 0.5s ease;
+                  overflow-x: hidden;
+                  overflow-y: auto;
+                  .navbar-container {
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        display: block;
+                        border: none;
+                        background: transaprent;
+                        .navbar-right {
+                              width: 100%;
+                              float: none !important;
+                              .navbar-c-items {
+                                    width: 100%;
+                                    float: none;
+                                    display: block;
+                                    position: static;
+                                    &.open{
+                                          .dropdown-menu{
+                                                opacity: 1;
+                                                visibility: visible;
+                                                transform: none;
+                                          }
+                                    }
+                                    >a {
+                                          height: 75px;
+                                    }
+                                    .dropdown-menu {
+                                          position: absolute;
+                                          left: 0;
+                                          right: 0;
+                                          visibility: hidden;
+                                          transform: translateY(-15px);
+                                          opacity: 0;
+                                          display: block;
+                                          margin: 0;
+                                          transition: all 0.5s ease;
+                                          >li {
+                                                >a {
+                                                      padding: 10px 15px;
+                                                }
+                                          }
+                                    }
+                                    .dropdown-toggle {
+                                          width: 100%;
+                                          border-radius: 0;
+                                          margin: 0;
+                                          height: auto;
+                                          text-align: left;
+                                          height: 50px;
+                                          padding:0px 15px;
+                                          @include box-shadow;
+                                          display: flex;
+                                          flex-wrap: nowrap;
+                                          img {
+                                                height: 35px;
+                                                width: 35px;
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                margin-top: 5px;
+                                          }
+                                          i{
+                                                font-size: 35px;
+                                                margin-right: 5px;
+                                                margin-bottom: 5px;
+                                                &:before{
+                                                      line-height: 45px;
+                                                }
+                                          }
+                                          span {
+                                                display: inline-block;
+                                                // float: left;
+                                                // padding-left: 5px;
+                                                vertical-align: middle;
+                                                line-height: 50px;
+                                                width: calc(100% - 60px);
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;
+                                                // overflow: hidden;
+                                                // font-size: 16px;
+                                                font-weight: bold;
+                                                font-size: 14px;
+                                          }
+                                          &:before {
+                                                content: '\f0d7';
+                                                right: 10px;
+                                                top: 10px;
+                                                font-family: fontawesome;
+                                                position: absolute;
+                                          }
+                                    }
+                                    .user-name {
+                                          display: none;
+                                    }
+                                    &.open {
+                                          .dropdown-toggle {
+                                                &:before {
+                                                      content: '\f0d8';
+                                                }
+                                          }
+                                          .dropdown-menu {
+                                                display: block;
+                                          }
+                                    }
+                                    &.user-info-list{
+                                          .dropdown-menu{
+                                                top: 100px;
+                                                // height: calc(100% - 100px);
+                                                .list-title{
+                                                      display: none;
+                                                }
+                                          }
+                                    }
+                                    &.service-info-list{
+                                          .dropdown-menu{
+                                                top: 50px;
+                                                // height: calc(100% - 50px);
+                                          }
+                                    }
+                              }
+                              .notification-list {
+                                    display: none;
+                              }
+                              .navbar-c-items{
+                                    // display: none;
+                              }
+                        }
+                        .navigation-menu {
+                              width: 100%;
+                              max-height: none;
+                              overflow-y: auto;
+                              overflow-x: hidden;
+                              >li {
+                                    display: block;
+                                    text-align: left;
+                                    position: relative;
+                                    >a{
+                                          border-bottom: 1px solid #f2f2f2;
+                                          i,span {
+                                                display: inline-flex;
+                                                vertical-align: middle;
+                                          }
+                                    }
+                              }
+                              .has-submenu {
+                                    .submenu{
+                                          border-bottom: 1px solid #f2f2f2;
+                                          position: relative;
+                                          top: auto;
+                                          left: auto;
+                                          bottom: auto;
+                                          right: auto;
+                                          display: none;
+                                          visibility: visible;
+                                          opacity: 1;
+                                          transition: none;
+                                    }
+                                    >a {
+                                          position: relative;
+                                          &:before {
+                                                border-bottom: 2px solid #999;
+                                                border-right: 2px solid #999;
+                                                content: '';
+                                                display: block;
+                                                height: 10px;
+                                                width: 10px;
+                                                margin-top: -5px;
+                                                pointer-events: none;
+                                                position: absolute;
+                                                right: 15px;
+                                                top: 50%;
+                                                transform-origin: 66% 66%;
+                                                transform: rotate(-45deg);
+                                                transition: all 0.15s ease-in-out;
+                                          }
+                                    }
+                                    &.is-opening {
+                                          >a {
+                                                &:before {
+                                                      transform: rotate(45deg);
+                                                }
+                                          }
+                                    }
+                              }
+                        }
+                  }
+            }
+            
+      }
+      &.menu-is-opening {
+            &:before {
+                  content: '';
+                  background: rgba(0, 0, 0, 0.3);
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 100;
+            }
+      }
+      .navbar-custom.active {
+            left: 0 !important;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+}
+
+.dropdown {
+      .dropdown-menu{
+            transform: translateY(10px);
+            margin: 0;
+            transition: all 0.2s ease;
+      }
+      
+      &.open{
+            .dropdown-menu{
+                  transform: none;
+            }
+      }
+      
+}
+
+

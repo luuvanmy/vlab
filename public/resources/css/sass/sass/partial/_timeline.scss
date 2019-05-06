@@ -1,0 +1,76 @@
+.timelines {
+  .timeline-list {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top:10px;
+    &:after {
+      position: absolute;
+      display: block;
+      width: 2px;
+      top: 0;
+       @media(max-width: 992px){
+              left: 125px;
+        }
+      left: 225px;
+      bottom: 0;
+      content: "";
+      background-color: #f0f0f0;
+      z-index: 1;
+    }
+    li {
+      position: relative;
+      margin: 0;
+      padding: 15px 0 5px;
+      border-bottom: 1px dotted #f8f8f8;
+      &:hover {
+        background-color: #f9f9f9
+      }
+      &:last-child{
+        position: relative;
+        border-bottom: 1px dotted transparent;
+        background-color: #f9fafc;
+        border-top: 1px solid #eaeef1;
+        z-index: 2;
+        padding: 10px;
+        &:hover {
+          background-color:#f9fafc !important;
+        }
+      }
+    }
+    .timeline-icon {
+      position: absolute;
+      @media(max-width: 992px){
+          left: 110px;
+      }
+      left: 210px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
+      font-size: 14px;
+      text-align: center;
+      background-color: #289ad5;
+      color: #fff;
+      border: 1px solid #1bbae1;
+      border-radius: 15px;
+      z-index: 500
+    }
+    .timeline-time {
+      float: left;
+       @media(max-width: 992px){
+              width: 100px;
+        }
+      width: 200px;
+      text-align: right
+    }
+    .timeline-content {
+        @media(max-width: 992px){
+                margin-left: 150px;
+        }
+      margin-left: 250px;
+      padding-right: 20px
+    }
+  }
+}

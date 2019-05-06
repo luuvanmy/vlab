@@ -1,0 +1,1268 @@
+.create-sale-order-form {
+    @media(max-width: 768px) {
+        // position: relative;
+        // z-index: 10300;
+        .modal {
+            z-index: 103000;
+        }
+        .content {
+            .page-title-box {
+                display: none;
+            }
+            .card-box {
+                position: unset;
+                border: none;
+                &-promotion {
+                    border-bottom: 1px solid #eee;
+                }
+            }
+            .container-sale-order {
+                padding: 0; // height: 100%;
+                position: fixed;
+                top: 61px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 0;
+                background: #fff;
+                z-index: 99;
+                margin: 0;
+                overflow: hidden;
+                padding-bottom: 60px;
+            }
+            .cart-box-sale-order {
+                padding: 0;
+                border: none;
+                margin: 0; // width: 100%;
+                // height: 100%;
+                .add_order {
+                    display: block;
+                    .tab_info_order {
+                        margin: 0 !important;
+                        .info_mobile_tab {
+                            position: absolute;
+                            top: 60px;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            opacity: 0;
+                            visibility: hidden;
+                            margin: 0;
+                            z-index: 90;
+                            padding: 0;
+                            transform: translateY(10px);
+                            padding-bottom: 50px;
+                            &.info_orders {
+                                // padding: 0 !important;
+                                // .info_order_option_title{
+                                //     margin: 0;
+                                //     display: block;
+                                // }
+                            }
+                            .input-group-addon {
+                                border-color: #ccc;
+                                opacity: 1 !important;
+                            }
+                            .btn-group {
+                                display: block;
+                                width: 100%;
+                                .btn {
+                                    width: 50%;
+                                    display: block;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                }
+                                &:after {
+                                    @include clear;
+                                }
+                            }
+                            .mobile-checkbox-label {
+                                display: block;
+                                position: relative;
+                                input[type="checkbox"] {
+                                    position: absolute;
+                                    right: 25px;
+                                    top: 10px;
+                                    margin: 0;
+                                    border: none;
+                                    background: transparent;
+                                    width: auto;
+                                    height: auto;
+                                    &:before {
+                                        background: black;
+                                        -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+                                        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+                                        border-radius: 8px;
+                                        content: '';
+                                        height: 16px;
+                                        margin-top: -8px;
+                                        position: absolute;
+                                        left: 0;
+                                        opacity: 0.3;
+                                        -webkit-transition: all 0.4s ease-in-out;
+                                        -o-transition: all 0.4s ease-in-out;
+                                        transition: all 0.4s ease-in-out;
+                                        width: 40px;
+                                    }
+                                    &:after {
+                                        background: white;
+                                        border-radius: 16px;
+                                        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                                        content: '';
+                                        height: 24px;
+                                        left: -4px;
+                                        margin-top: -8px;
+                                        position: absolute;
+                                        top: -4px;
+                                        -webkit-transition: all 0.3s ease-in-out;
+                                        -o-transition: all 0.3s ease-in-out;
+                                        transition: all 0.3s ease-in-out;
+                                        width: 24px;
+                                    }
+                                    &:checked {
+                                        &:before {
+                                            background: $success;
+                                            opacity: 1;
+                                        }
+                                        &:after {
+                                            left: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                            .info_order_option_title {
+                                text-align: left;
+                                background: $custom;
+                                position: sticky;
+                                height: 40px;
+                                padding: 0 15px;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                margin: 0 -10px;
+                                line-height: 40px;
+                                border: none;
+                                z-index: 1000;
+                                display: none;
+                                a {
+                                    color: #fff;
+                                    display: inline-block; // display: block;
+                                }
+                                &:after {
+                                    @include clear;
+                                }
+                            }
+                            .info_order_row {
+                                margin-top: 15px;
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                            &.active {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: none;
+                                transition: opacity 0.3s ease, transform 0.3s ease;
+                            }
+                        }
+                        .empty-product {
+                            margin: 0 !important; // height: 100%;
+                            position: absolute;
+                            top: 60px;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            overflow: auto;
+                            padding: 0 !important;
+                            .card-box {
+                                height: 100%;
+                                margin: 0;
+                            }
+                        }
+                        .list-promotion {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0 -10px;
+                            li {
+                                display: block;
+                                position: relative;
+                                padding: 15px 10px;
+                                border-bottom: 1px solid #ddd;
+                                span {
+                                    vertical-align: middle;
+                                    display: inline-block;
+                                    width: calc(100% - 38px);
+                                }
+                                a {
+                                    vertical-align: middle;
+                                    display: inline-block;
+                                    width: 34px;
+                                    height: 34px;
+                                    line-height: 34px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .details_order {
+                    padding: 0;
+                    border: none;
+                    background: transparent;
+                    .option-info-order {
+                        // display: none;
+                        margin: 0 !important;
+                        border: none;
+                    }
+                    .product_search_autocomplete {
+                        // position: unset;
+                        display: none;
+                        .content-search-autocomplete {
+                            top: 40px;
+                            left: 0;
+                            right: 0;
+                            overflow: hidden;
+                            width: 100%;
+                            min-width: 100%;
+                            max-width: 100%;
+                        }
+                        .btn-close-autocomplete {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 40px;
+                            height: 40px;
+                            background: $danger;
+                            color: transparent;
+                            z-index: 3;
+                            text-align: center;
+                            &:before {
+                                content: '\f00d';
+                                display: inline-block;
+                                font-family: fontawesome;
+                                line-height: 40px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .tab_info_order {
+                        &_left {
+                            height: 100%;
+                            padding: 0;
+                            .info_list {
+                                // padding-top: 10px;
+                                .table-responsive {
+                                    border: none;
+                                    margin: 0;
+                                    .table {
+                                        display: block;
+                                        thead,
+                                        tbody,
+                                        tfoot,
+                                        tr {
+                                            display: block;
+                                            width: 100%;
+                                        }
+                                        thead {
+                                            display: none;
+                                        }
+                                        tbody,
+                                        tfoot {
+                                            border: none;
+                                        }
+                                        tbody {
+                                            tr {
+                                                position: relative;
+                                                border-bottom: 1px solid #eee; // padding-bottom: 10px;
+                                                // padding-top: 10px;
+                                                padding: 10px 15px;
+                                                &:after {
+                                                    @include clear;
+                                                }
+                                            }
+                                            td {
+                                                display: block;
+                                                max-width: unset;
+                                                min-width: unset;
+                                                border: none;
+                                                padding: 0 !important;
+                                                font-size: 14px !important;
+                                                float: left;
+                                                &.td {
+                                                    &_index {
+                                                        display: none;
+                                                        width: 50px; // padding-left: 15px !important;
+                                                        float: left;
+                                                    }
+                                                    &_info {
+                                                        float: left;
+                                                        width: calc(100% - 50px) !important; // padding: 8px 0 0 15px !important;
+                                                        // padding-left: 15px !important;
+                                                        font-size: 16px !important;
+                                                        white-space: normal;
+                                                    }
+                                                    &_available_quantity {
+                                                        display: none;
+                                                    } // &_available_quantity{
+                                                    //     display: block;
+                                                    // }
+                                                    &_quantity {
+                                                        width: 135px !important; // padding-left: 15px !important;
+                                                        float: left;
+                                                    }
+                                                    &_price {
+                                                        text-align: left;
+                                                        width: 100% !important;
+                                                        float: left; // padding-left: 15px !important;
+                                                    }
+                                                    &_total_price {
+                                                        font-weight: bold;
+                                                        width: calc(100% - 135px) !important;
+                                                        font-size: 16px !important; // padding-right: 15px  !important;
+                                                        float: left;
+                                                        line-height: 30px;
+                                                        text-align: right;
+                                                        span {
+                                                            font-size: 16px;
+                                                            font-weight: bold;
+                                                        }
+                                                    }
+                                                    &_action {
+                                                        position: absolute;
+                                                        top: 0px;
+                                                        right: 0px;
+                                                        width: auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        tfoot {
+                                            tr {
+                                                border-bottom: 1px dashed #eee;
+                                                &:after {
+                                                    @include clear;
+                                                }
+                                                &.tr_promotion_coupon {
+                                                    padding-bottom: 10px;
+                                                }
+                                                .btn-choose-product {
+                                                    padding: 0 !important;
+                                                    width: 100% !important;
+                                                }
+                                                td {
+                                                    font-size: 14px !important;
+                                                    font-weight: normal; // width: 50% !important;
+                                                    display: inline-block;
+                                                    padding: 10px 15px !important;
+                                                    float: left;
+                                                    white-space: normal;
+                                                    border: none;
+                                                    text-transform: capitalize;
+                                                    span {
+                                                        display: block;
+                                                    } // &:first-child{
+                                                    //     text-align: left !important;
+                                                    //     padding-left: 15px !important;
+                                                    // }
+                                                    // &:last-child{
+                                                    //     text-align: right !important;
+                                                    //     padding-right: 15px !important;
+                                                    //     font-size: 16px !important;
+                                                    // }
+                                                    input {
+                                                        // float:right;
+                                                        margin-right: 5px;
+                                                        font-size: 16px;
+                                                        text-align: right;
+                                                        padding: 0 15px;
+                                                    }
+                                                    &.td_foot_value {
+                                                        text-align: right;
+                                                        float: right;
+                                                        &.price_discount {
+                                                            input {
+                                                                margin-right: 15px;
+                                                            }
+                                                        }
+                                                    }
+                                                    &.td_promotion_coupon_title {
+                                                        display: block;
+                                                        text-align: left;
+                                                        width: 100% !important;
+                                                        padding: 0 15px !important;
+                                                    }
+                                                    &.td_promotion_coupon {
+                                                        width: 100% !important;
+                                                        padding: 0 15px !important;
+                                                        input {
+                                                            border: 1px solid #ccc;
+                                                            border-right: 0;
+                                                            width: calc(100% - 120px);
+                                                            float: left;
+                                                            text-align: left;
+                                                            margin: 0;
+                                                            line-height: 36px;
+                                                            padding: 0 12px;
+                                                        }
+                                                        .btn-promotion-saleorder {
+                                                            width: 120px;
+                                                            float: left;
+                                                            margin: 0;
+                                                            padding: 0 !important;
+                                                            line-height: 36px;
+                                                            height: 38px !important; // background: $primary;
+                                                            // border-color:$primary;
+                                                            // color:#fff;
+                                                            &:focus,
+                                                            &:visited {
+                                                                // background: $primary;
+                                                                // color:#fff;
+                                                            }
+                                                            font-size: 14px; // border-color:#eee;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .tab_info_order_right {
+                        // display: none;
+                    }
+                }
+            }
+            .sale-order-navbar-button {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 50px;
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                z-index: 100;
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: none;
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        display: block;
+                        float: left;
+                        width: 50%;
+                        a {
+                            display: block;
+                            line-height: 50px;
+                            padding: 0;
+                        }
+                    }
+                    &:after {
+                        @include clear;
+                    }
+                }
+            }
+            .sale-order-navbar-bottom {
+                position: fixed; // display: none;
+                top: 60px;
+                right: 0;
+                left: 0;
+                height: 60px;
+                background: $custom;
+                z-index: 101;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    white-space: nowrap;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    text-align: center;
+                    li {
+                        display: inline-block;
+                        &.active {
+                            a {
+                                background: rgba(0, 0, 0, 0.1);
+                            }
+                        }
+                        a {
+                            text-align: center;
+                            display: block;
+                            color: #fff;
+                            padding: 5px 15px;
+                            i,
+                            span {
+                                display: block;
+                            }
+                            i {
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal-find-product {
+            width: 100%;
+            height: 100%;
+            right: -100%;
+            top: auto;
+            bottom: -15px;
+            transition: all 0.2s linear;
+            display: block !important;
+            &.in {
+                overflow: hidden;
+                bottom: 0;
+            }
+            .modal-dialog {
+                height: 100%;
+                margin: 0;
+                transform: none;
+                .modal-content {
+                    height: 100%;
+                    padding: 0;
+                    border: none;
+                    border-radius: 0;
+                    .modal-header {
+                        height: 60px;
+                        padding: 0;
+                        border: none;
+                        position: relative;
+                        input {
+                            border-bottom: 1px solid #ccc;
+                            border-radius: 0;
+                            height: 44px;
+                            &:focus {
+                                border-color: $primary;
+                            }
+                        }
+                        .modal-title {
+                            &:after {
+                                @include clear;
+                            }
+                            .btn-filter {
+                                width: 100px;
+                                float: left;
+                                height: 44px;
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+                            .input-group {
+                                width: calc(100% - 100px);
+                                float: right;
+                                .input-group-addon {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .close {
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            width: 60px;
+                            height: 60px; // border-radius: 50%;
+                            background: $danger;
+                            color: #fff;
+                            border: 1px solid $danger;
+                            display: none;
+                        }
+                    }
+                    .modal-body {
+                        padding: 0;
+                        height: calc(100% - 111px);
+                        overflow: hidden;
+                        border-top: 1px solid #ccc;
+                        width: 100%;
+                        position: relative;
+                        &.show-filter {
+                            .modal-search-input {
+                                left: 0;
+                            }
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background: rgba(0, 0, 0, 0.3);
+                                z-index: 9;
+                            }
+                        }
+                        .modal-search-input {
+                            padding: 15px;
+                            position: absolute;
+                            top: 0;
+                            width: 80%;
+                            bottom: 0;
+                            left: -80%;
+                            overflow-x: hidden;
+                            overflow-y: auto;
+                            background: #fff;
+                            border-right: 1px solid #eee;
+                            margin-bottom: 0 !important;
+                            transition: all 0.3s ease;
+                            z-index: 10;
+                        }
+                        >.table-responsive {
+                            margin-bottom: 0;
+                            height: 100%;
+                            overflow-x: hidden;
+                            overflow-y: auto; // border-top: 1px solid #ccc;
+                            border: none;
+                            .td {
+                                &_index {}
+                                &_sku {}
+                                &_name {}
+                                &_unit {}
+                                &_price_sale {}
+                                &_price_buy_sale {}
+                                &_total_inventory {}
+                                &_available_quantity_sale {}
+                            }
+                            >.table,
+                            thead,
+                            tbody,
+                            tr {
+                                // display: block;
+                                // width: 100%;
+                            }
+                            >.table {
+                                // display: block;
+                                width: 100%;
+                                tr {
+                                    white-space: nowrap;
+                                    overflow: auto;
+                                    th,
+                                    td {
+                                        // display: inline-block;
+                                        // float:left;
+                                        // width: 200px;
+                                    }
+                                    &:after {
+                                        @include clear;
+                                    }
+                                }
+                                thead {
+                                    tr {
+                                        th {
+                                            vertical-align: middle;
+                                            padding: 12px 10px !important;
+                                            font-size: 16px !important;
+                                        }
+                                    }
+                                }
+                                >tbody {
+                                    >tr {
+                                        &:last-child {
+                                            >td {
+                                                // border-bottom: 1px sol;
+                                            }
+                                        }
+                                        >td {
+                                            padding: 15px 10px !important;
+                                            font-size: 15px !important;
+                                            white-space: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .modal-footer {
+                        height: 50px;
+                        padding: 0;
+                        .row-footer {
+                            margin: 0;
+                            .col-footer {
+                                padding: 0;
+                                white-space: nowrap;
+                                display: table;
+                                button,
+                                a {
+                                    display: block;
+                                    height: 50px;
+                                    padding: 0 15px;
+                                    line-height: 50px;
+                                    background: $success;
+                                    border-color: $success;
+                                    font-size: 16px;
+                                    float: left;
+                                    margin: 0;
+                                    &:focus,
+                                    &:visited {
+                                        background: $success;
+                                        border-color: $success;
+                                    }
+                                    &.btn-close-modal {
+                                        width: 100px;
+                                    }
+                                    &.btn-choose-product {
+                                        width: calc(100% - 100px);
+                                    }
+                                }
+                                &:after {
+                                    @include clear;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal-find-delivery-user {
+            width: 100%;
+            height: 100%;
+            right: -100%;
+            top: auto;
+            bottom: -15px;
+            transition: all 0.2s linear;
+            display: block !important;
+            &.in {
+                overflow: hidden;
+                bottom: 0;
+            }
+            .modal-dialog {
+                height: 100%;
+                margin: 0;
+                transform: none;
+                .modal-content {
+                    height: 100%;
+                    padding: 0;
+                    border: none;
+                    border-radius: 0;
+                    .modal-header {
+                        padding: 0 15px;
+                        height: 50px;
+                        .modal-title {
+                            font-size: 15px;
+                            line-height: 50px;
+                            span {
+                                display: none;
+                            }
+                        }
+                        .close {
+                            display: none;
+                        }
+                    }
+                    .modal-footer {
+                        height: 50px;
+                        padding: 0 0px;
+                        button {
+                            height: 50px;
+                            padding: 0 15px;
+                            line-height: 50px;
+                            min-width: 150px;
+                            margin: 0;
+                            width: 50%;
+                            display: block;
+                            float: left;
+                        }
+                    }
+                    .modal-body {
+                        height: calc(100% - 100px);
+                        padding: 0 15px;
+                        overflow: auto;
+                        .modal-search-input {
+                            .flex-item {
+                                margin: 0;
+                                border: none;
+                                .flex-bg-gray {
+                                    border: none;
+                                    background: #fff;
+                                }
+                            }
+                            .search-total {
+                                border: none;
+                                margin: 0;
+                            }
+                        }
+                        .table-responsive {
+                            overflow: hidden;
+                            .table {
+                                border: none !important;
+                                thead,
+                                tbody {
+                                    tr {
+                                        th,
+                                        td {
+                                            display: none;
+                                            &.td_index,
+                                            &.td_name,
+                                            &.td_phone {
+                                                display: table-cell;
+                                                white-space: normal;
+                                                font-size: 14px !important;
+                                            }
+                                            &.td_index {
+                                                width: 50px;
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal-find-delivery-fee {
+            width: 100%;
+            height: 100%;
+            right: -100%;
+            top: auto;
+            bottom: -15px;
+            transition: all 0.2s linear;
+            display: block !important;
+            &.in {
+                overflow: hidden;
+                bottom: 0;
+            }
+            .modal-dialog {
+                height: 100%;
+                margin: 0;
+                transform: none;
+                .modal-content {
+                    height: 100%;
+                    padding: 0;
+                    border: none;
+                    border-radius: 0;
+                    .modal-header {
+                        padding: 0 15px;
+                        height: 50px;
+                        .modal-title {
+                            font-size: 15px;
+                            line-height: 50px;
+                            span {
+                                display: none;
+                            }
+                        }
+                        .close {
+                            display: none;
+                        }
+                    }
+                    .modal-footer {
+                        height: 50px;
+                        padding: 0 0px;
+                        button {
+                            height: 50px;
+                            padding: 0 15px;
+                            line-height: 50px;
+                            min-width: 150px;
+                            margin: 0;
+                            width: 100%;
+                            display: block;
+                            background: $danger;
+                            border-color: $danger;
+                            color: #fff;
+                            &:focus,
+                            &:visited {
+                                background: $danger;
+                                border-color: $danger;
+                            }
+                        }
+                    }
+                    .modal-body {
+                        height: calc(100% - 100px);
+                        padding: 0;
+                        overflow: auto;
+                        .table-responsive {
+                            .table {
+                                thead {
+                                    display: none;
+                                }
+                                display: block;
+                                width: 100%;
+                                tbody {
+                                    display: block;
+                                    width: 100%;
+                                    tr {
+                                        display: block;
+                                        width: 100%;
+                                        border-bottom: 1px solid #ddd;
+                                        td {
+                                            display: block;
+                                            width: 100%;
+                                            border: none;
+                                            text-align: left;
+                                            &:before {
+                                                content: attr(data-title);
+                                                display: inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    .chart-box{
+        .box-title-chart{
+            padding: 15px;
+        }
+    }
+    &.report-warehouses {
+        .container-report {
+            .chart-box {
+                .chart-box-inner {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                &-warehouse-intro {
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                    .box-title-chart {
+                        background: #707075;
+                        color: #fff;
+                        text-align: center;
+                        display: block;
+                        
+                    }
+                    .item-chart-box-title {
+                        text-align: center;
+                        padding-bottom: 15px;
+                    }
+                }
+                border: 1px solid #ddd;
+                .up-down {
+                    border-top: 1px solid #eee;
+                    border-bottom: 1px solid #ddd;
+                    text-align: left;
+                }
+            }
+            canvas {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.report-sales,
+    &.report-by-user {
+        .container-report {
+            .chart-box {
+                &.chart-box-category,
+                &.chart-box-user {
+                    padding-top: 30px;
+                    padding-bottom: 30px !important;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .content.report-mobile-version {
+        // padding-top: 120px;
+        .container-report {
+            // position: fixed;
+            // top: 120px;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // overflow: hidden;
+            padding: 0 8px; // z-index: 11;
+            background: #f2f2f2;
+            .table-responsive {
+                overflow: hidden;
+            }
+            .table-mobile{
+                display: block;
+                width: 100%;
+                border: none;
+                padding: 0;
+                thead,
+                tbody,
+                tr,
+                td,
+                th {
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    padding: 0;
+                }
+                thead {
+                    display: none;
+                }
+                tbody {
+                    border: 1px solid #eee;
+                    tr {
+                        border-bottom: 1px solid #eee;
+                        padding: 10px;
+                        td,
+                        th {
+                            margin-bottom: 5px;
+                            text-align: left;
+                            font-size: 13px;
+                            white-space: normal;
+                            &.td_total_price {
+                                display: inline-block;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+                .td__hide {
+                    display: none;
+                }
+                .td__show {
+                    text-align: left;
+                    &:before {
+                        content: attr(data-title);
+                        display: inline-block;
+                        font-weight: 500;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            nav {
+                text-align: center;
+            }
+            .mobile-tab {
+                .xs-no-border {
+
+                }
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: none;
+                }
+            }
+            .chart-box {
+                background: #fff;
+                padding: 0;
+                &-border {
+                    border: 1px solid #ddd;
+                }
+                .box-title-chart {
+                    padding: 10px 5px;
+                    display: block;
+                    text-align: center;
+                    a {
+                        display: none;
+                    }
+                    &-select {
+                        width: 100% !important;
+                        margin: 10px 0 0 0;
+                        border-top: 1px solid #eee;
+                    }
+                }
+                .nav-tabs {
+                    li {
+                        // width: 25%;
+                        // display: block;
+                        // float: left !important;
+                        // text-align: center;
+                        // a{
+                        //     padding: 10px 0 !important;
+                        // }
+                        a {
+                            padding: 15px 25px !important;
+                        }
+                    }
+                }
+                .tab-content {
+                    padding: 0;
+                    background: #f2f2f2;
+                    .tab-pane {
+                        padding: 0 10px;
+                        font-size: 18px;
+                        display: block;
+                        background: #fff;
+                        margin-bottom: 15px;
+                        border: 1px solid #ddd;
+                        &-title {
+                            margin-left: -10px;
+                            margin-right: -10px;
+                            padding: 15px;
+                            border-bottom: 1px solid #eee;
+                            margin-bottom: 15px;
+                            text-align: center;
+                            h3 {
+                                font-size: 18px;
+                                margin: 0;
+                                color: #3c4d66;
+                                text-transform: uppercase;
+                                font-weight: 500;
+                            }
+                        }
+                        &:after {
+                            @include clear;
+                        }
+                    }
+                }
+            }
+            .chart-box-report-wrap {
+                padding: 0 !important; // border: none !important;
+                // margin: 0 !important;
+                min-height: 100% !important;
+                &.chart-box-report-wrap-tab-content {
+                    border: none !important;
+                }
+            }
+            .no-min-height-xs {
+                min-height: unset !important;
+            }
+            .no-max-height-xs {
+                max-height: unset !important;
+            }
+            .scroll-inner-box {
+                // max-height: unset !important;
+                // overflow: unset !important;
+            }
+        }
+        .page-title-box {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .report-header {
+            width: 100%;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            .dropdown-daterange {
+                button {
+                    width: 100%;
+                }
+            }
+            .inline-block {
+                display: block;
+                width: 100%;
+                .form-control {
+                    width: 100%;
+                    margin: 0;
+                    max-width: unset !important;
+                }
+            }
+        }
+        .chart-box {
+            .sm-h-small,
+            .text-muted {
+                font-weight: 500;
+                color: $text;
+            }
+            &-warehouse-intro {
+                .box-title-chart {
+                    margin-bottom: 0;
+                }
+                .item-chart-box-title {
+                    padding: 15px;
+                    border: 1px solid #eee;
+                }
+            }
+        }
+        &.report-warehouses {
+            .chart-box {
+                .chart-box-inner {
+                    .mobile-block {
+                        display: block;
+                        width: 100%;
+                        max-width: unset !important;
+                        text-align: right !important;
+                        .form-control {
+                            width: 100%;
+                        }
+                    }
+                }
+                .box-content-chart {
+                    text-align: center;
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+                .up-down {
+                    text-align: center;
+                }
+                .chart-labels {
+                    padding-left: 15px;
+                    ul>li {
+                        position: relative;
+                        padding-left: 20px;
+                        span {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &.report-sales {
+            .chart-box {
+                padding: 15px 0;
+                .report-header {
+                    text-align: left;
+                }
+                .btn-group {
+                    width: 100%;
+                    .btn {
+                        width: 50%;
+                        float: left;
+                        display: block;
+                    }
+                }
+            }
+            .table-normal{
+                thead{
+                    display: unset;
+                }
+            }
+        }
+        .report-mobile-navigation {
+            position: fixed;
+            top: 61px;
+            right: 0;
+            left: 0;
+            height: 60px;
+            background: $custom;
+            ul {
+                list-style: none;
+                white-space: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding: 0;
+                margin: 0;
+                li {
+                    display: inline-block;
+                    min-width: 150px;
+                    a {
+                        display: block;
+                        text-align: center;
+                        background: transparent;
+                        color: #fff;
+                        padding: 5px 15px;
+                        height: 60px;
+                        i,
+                        span {
+                            display: block;
+                        }
+                    }
+                    &.active {
+                        background: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+        }
+    }
+    .content.report-by-user {}
+}

@@ -1,0 +1,116 @@
+
+.social-icons {
+  display: block;
+  margin-bottom: $mg-bottom;
+  a {
+  border: none;
+margin: 0 3px 6px 0;
+display: inline-block;
+width: 40px;
+height: 40px;
+color: #fff;
+background-color: transparent;
+line-height: 42px;
+text-align: center;
+font-size: 16px;
+font-weight: bold;
+-webkit-transition: all ease 0.5s;
+transition: all ease 0.5s;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+    .fa{
+      font-size: 18px;
+    }
+    &:last-child {
+      margin-right: 0 !important;
+    }
+    &.social-facebook{
+      background-color: #3a5a97;
+       &:hover {
+          background-color: #5882dd;
+        }
+    }
+    &.social-google-plus{
+      background-color: #d64b2e;
+       &:hover {
+          background-color: #f85f43;
+        }
+    }
+
+    &.social-zalo{
+      background-color: #369bd3;
+       &:hover {
+          background-color: #6e98f4;
+        }
+    }
+  }
+
+  a:hover {
+    background-color: $theme-color;
+    color: #fff;
+    border:none;
+  }
+
+  &.large a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+  }
+
+  &.medium a {
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 15px;
+  }
+
+  &.small a {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    margin-right: 0px;
+  }
+
+  &.base-white a {
+    background-color: #fff;
+  }
+
+  &.dark a {
+    background-color: #252525;
+    color: $text;
+  }
+
+  &.nobase a {
+    width: auto;
+    height: auto;
+    margin-right: 14px;
+    background-color: transparent;
+    color: #fff;
+
+    &:hover {
+      background-color: transparent !important;
+      color: #fff;
+    }
+  }
+
+  &.nobase.dark a {
+    color: $text;
+
+    &:hover {
+      color: $theme-color !important;
+    }
+  }
+}
+.social-icons.small a {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  .fa {
+    font-size: 14px;
+  }
+}
+.rounded a {
+  border-radius:50%;
+}

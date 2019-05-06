@@ -1,0 +1,131 @@
+@import "sass/static/_variables.scss";
+
+.alert {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding: 20px 15px;
+    width: 350px;
+    z-index: 2000 !important;
+    font-size: 14px;
+    b {
+       font-weight: 500;
+       text-transform: uppercase;
+       font-size: 12px;
+    }
+    &-default {
+       background-color: white;
+       color: #555555;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(255, 255, 255, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 255, 255, 0.2);
+       a,
+       .alert-link {
+          color: rgba(0, 0, 0, 0.87);
+       }
+    }
+    &-inverse {
+       background-color: $black;
+       color: #fff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(33, 33, 33, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(33, 33, 33, 0.2);
+       a,
+       .alert-link {
+          color: #fff;
+       }
+    }
+    &-primary {
+       background-color: $primary;
+       color: #ffffff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
+       a,
+       .alert-link {
+          color: #ffffff;
+       }
+    }
+    &-success {
+       background-color: $success;
+       color: #ffffff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+       a,
+       .alert-link {
+          color: #ffffff;
+       }
+    }
+    &-info {
+       background-color: $info;
+       color: #ffffff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+       a,
+       .alert-link {
+          color: #ffffff;
+       }
+    }
+    &-warning {
+       background-color: $warning;
+       color: #ffffff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+       a,
+       .alert-link {
+          color: #ffffff;
+       }
+    }
+    &-danger {
+       background-color: $danger;
+       color: #ffffff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+       a,
+       .alert-link {
+          color: #ffffff;
+       }
+    }
+    &-rose {
+       background-color: #eb3573;
+       color: #ffffff;
+       border-radius: 3px;
+       box-shadow: 0 12px 20px -10px rgba(233, 30, 99, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(233, 30, 99, 0.2);
+       a,
+       .alert-link {
+          color: #ffffff;
+       }
+    }
+    i[data-notify="icon"] {
+       font-size: 30px;
+       display: block;
+       left: 15px;
+       position: absolute;
+       top: 50%;
+       margin-top: -15px;
+    }
+    span {
+       display: block;
+       max-width: 89%;
+    }
+    &-icon {
+       display: block;
+       float: left;
+       margin-right: 15px;
+       i {
+          margin-top: -7px;
+          top: 5px;
+          position: relative;
+       }
+    }
+    &-with-icon {
+       padding-left: 65px;
+    }
+    a,
+    &-link {
+       color: #555555;
+    }
+    .close {
+       font-size: inherit;
+       color: #FFFFFF;
+       opacity: .9;
+       text-shadow: none;
+    }
+ }

@@ -1,0 +1,30 @@
+.breadcrumb {
+  background-color: transparent;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  a{
+    color: $muted;
+  }
+  > .active {
+    color: #000;
+  }
+  @media(max-width:767px){
+    li:first-child{
+      display: none;
+    }
+    li:nth-child(2):before{
+      content: '';
+      padding:0px;
+    }
+  }
+ 
+  +li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "\f105" !important;
+    font-family: FontAwesome !important;
+
+  }
+}

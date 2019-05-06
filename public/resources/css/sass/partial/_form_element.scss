@@ -1,0 +1,98 @@
+$heading-color: #444444;
+$subheading-color: #acacac;
+$bg-light: #f7f7f7;
+$bg-dark: #171717;
+$dark-grey: #424242;
+$light-grey: #a3a3a3;
+$border-color: #ebebeb;
+$main-color: #00c9d0;
+/*-------------------------------------------------------*/
+/* Form Elements
+/*-------------------------------------------------------*/
+.form-control{
+  border-radius: 0px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+select,
+textarea {
+
+}
+
+textarea {
+  height: auto;
+  padding: 8px 16px;
+  margin-bottom: 25px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  border-color: $theme-color !important;
+  background-color: #fff;
+  outline: none;
+  box-shadow: none !important;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea {
+  -webkit-appearance: none;
+}
+
+/* Change Color of Placeholders */
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $text;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $text;
+  opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $text;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $text;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding-left: 12px;
+
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-image: url(../images/icons/dropdown.png);
+}
+select::-ms-expand {
+  display: none;
+}

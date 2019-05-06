@@ -1,0 +1,330 @@
+.facebook-app {
+    .fb-setting {
+        &-wrap {
+            background: $white;
+            padding: 20px;
+            box-shadow: 0 0 5px 0px #e0e1e3;
+            &:after {
+                clear: both;
+                content: ".";
+                display: block;
+                font-size: 0;
+                height: 0;
+                line-height: 0;
+                visibility: hidden;
+            }
+            >ul {
+                list-style: none;
+                padding: 0px;
+                margin: 15px;
+                background: $white;
+                border: 1px solid #dadada;
+                border-radius: 10px;
+                overflow: hidden;
+                >li {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    &:after {
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        font-size: 0;
+                        height: 0;
+                        line-height: 0;
+                        visibility: hidden;
+                    }
+                    &:hover {
+                        background: #ecf0f5;
+                    }
+                }
+            }
+            .tag {
+                &-color {
+                    float: left;
+                    padding: 5px;
+                    position: relative;
+                    cursor: pointer;
+                    &-choose {
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                        border-radius: 50%;
+                        background-color: #4489e4;
+                    }
+                }
+                &-title {
+                    margin-left: 10px;
+                    width: calc(100% - 100px);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                }
+                &-tool {
+                    i {
+                        font-size: 22px;
+                        border: 1px solid #ccc;
+                        padding: 2px;
+                        border-radius: 5px;
+                    }
+                }
+                &-create {
+                    &:after {
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        font-size: 0;
+                        height: 0;
+                        line-height: 0;
+                        visibility: hidden;
+                    }
+                    &-color {
+                        float: left;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid #dadada;
+                        border-right: 0;
+                        padding: 6px;
+                        border-top-left-radius: 10px !important;
+                    }
+                    &-title {
+                        width: calc(100% - 40px);
+                        height: 40px;
+                        float: left;
+                        input {
+                            border-left: 0;
+                            border-top-right-radius: 10px !important;
+                            height: 100%;
+                            &:focus {
+                                border-color: #dadada !important;
+                            }
+                        }
+                    }
+                    &-tool {
+                        width: 100%; 
+                        &:after {
+                            clear: both;
+                            content: ".";
+                            display: block;
+                            font-size: 0;
+                            height: 0;
+                            line-height: 0;
+                            visibility: hidden;
+                        }
+                        .btn {
+                            width: 100%;
+                            border-bottom-left-radius: 10px !important;
+                            border-bottom-right-radius: 10px !important;
+                            padding: 4px 10px;
+                            min-height: 30px;
+                            transition: 0.5s all ease;
+                            &.btn-success {
+                                background-color: $white !important;
+                                color: $success !important;
+                                &:hover {
+                                    background-color: $success !important;
+                                    color: $white !important;
+                                }
+                            }
+                            &.btn-danger {
+                                background-color: $white !important;
+                                color: $danger !important;
+                                &:hover {
+                                    background-color: $danger !important;
+                                    color: $white !important;
+                                }
+                            }
+                        }
+                        &-item {
+                            width: 50%;
+                            float: left;
+                            &:first-child {
+                                .btn {
+                                    border-bottom-left-radius: 10px !important;
+                                    border-bottom-right-radius: 0 !important;
+                                }
+                            }
+                            &:last-child {
+                                .btn {
+                                    border-bottom-left-radius: 0 !important;
+                                    border-bottom-right-radius: 10px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-title {
+            border-bottom: 1px solid #dadada;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &-head {
+            background: url('/resources/images/facebook/bg_title_face.jpg') no-repeat center;
+            background-size: cover;
+            padding: 25px;
+            border:none;
+            .fb-setting-title {
+                margin:0;
+                border:none;
+                display: inline-block;
+            }
+            @media screen and (max-width: 1024px){
+                .pull-right, .pull-left {
+                    float: none !important;
+                }
+                .pull-right {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        &-cont {
+            height: calc(100% - 86px);
+            &:after {
+                clear: both;
+                content: ".";
+                display: block;
+                font-size: 0;
+                height: 0;
+                line-height: 0;
+                visibility: hidden;
+            }
+            &-left {
+                width: 590px;
+                height: 100%;
+                float: left;
+                background: $white;
+                border-right: 1px solid $border-color;
+                .fb-fanpage-list-btn {
+                    border-top: 0;
+                }
+                .fb-user-list {
+                    height: calc(100% - 124px);
+                    >ul {
+                        >li {
+                            padding: 10px 15px;
+                        }
+                    }
+                    &-content, &-info {
+                        display: flex;
+                        align-items: center;
+                    }
+                    &-info {
+                        justify-content: flex-end;
+                    }
+                    .text-success {
+                        color: $success !important;
+                    }
+                }
+                @media screen and (max-width: 1024px){
+                    width: 100%;
+                    height: 400px;
+                }
+            }
+            &-right {
+                width: calc(100% - 590px);
+                height: 100%;
+                float: left;
+                background: $white;
+                position: relative;
+                &:after {
+                    content: '';
+                    height: 120px;
+                    background: #cfe9fd;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                } 
+                .fb-wrap-scroll {
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: auto;
+                }
+                &-text { 
+                    padding: 20px 40px 20px 40px;
+                    position: relative;
+                    z-index: 9;
+                    height: auto !important;
+                    h2 {
+                        margin-bottom: 30px;
+                        font-size: 26px;
+                    }
+                }
+                &-img {
+                    position: relative;
+                    bottom: 0;
+                    z-index: 9;
+                }
+                .service-price {
+                    font-size: 18px;
+                    display: block;
+                    span {
+                        font-weight: 700;
+                        font-size: 24px;
+                    }
+                }
+                @media screen and (max-width: 1366px){
+                    .fb-setting-cont-right-text {
+                        h2 {
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1024px){
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @media screen and (max-width: 768px){
+                height: auto;
+            }
+        }
+        &-height {
+            @media screen and (max-width: 991px){
+                height: calc(100% - 10px);
+            }
+        }
+    }
+    .tab-setting {
+        list-style: none;
+        padding: 10px 10px 0;
+        margin: 0;
+        background: #fff;
+        white-space: nowrap;
+        overflow: auto;
+        &-item {
+            display: inline-block;
+            padding: 5px 10px;
+            &.active {
+                background: #ecf0f5;
+                border-top: 2px solid $primary;
+                border-left: 1px solid $border-color;
+                border-right: 1px solid $border-color;
+            }
+            a {                  
+                color: #000;
+                font-size: 15px;
+            }
+        }
+        &-cont {
+            height: calc(100% - 130px);
+            padding: 10px;
+            @media screen and (max-width: 991px){
+                height: calc(100% - 40px);
+            }
+            @media screen and (max-width: 1024px){
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            &.scroll {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+        }
+    }
+}

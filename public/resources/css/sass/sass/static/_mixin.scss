@@ -1,0 +1,100 @@
+
+
+@mixin border-radius($radius...) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$all: all .3s ease-in-out;
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin clamp-line ($line...) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin font-page($font-style...) {
+  font-family: $font-style;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin absolute-Y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absolute-X {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin default {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: 0;
+}
+
+@mixin full-width {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@mixin img {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin img-white {
+  filter: brightness(0) invert(1);
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@mixin clear {
+  display: block;
+  content: '';
+  clear: both;
+}

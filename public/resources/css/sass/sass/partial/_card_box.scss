@@ -1,0 +1,50 @@
+/* Card Box */
+
+.card-box {
+  padding: 20px;
+  border: 1px solid $light;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  background-color: $white;
+  .details_order {
+    margin: 0;
+  }
+}
+
+.card-header {
+  background-color: lighten($light3, 10%);
+}
+
+.box-flex {
+  display: flex;
+  flex-wrap: wrap;
+  &.flex-center {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .box-title {
+    padding: 15px;
+  }
+  .flex-item {
+    margin-bottom: 15px;
+    .block {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    
+    }
+    .flex-bg-gray{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #f7f7f9;
+      border: 1px solid #e1e1e8;
+      padding: 10px;
+    }
+  }
+}

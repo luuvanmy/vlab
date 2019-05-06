@@ -1,0 +1,150 @@
+@media screen and (max-width: 500px) {
+    .table-responsive-mobile {
+        width: 100%;
+        margin-bottom: 50px;
+        thead {
+            position: absolute;
+            clip: rect(1px 1px 1px 1px);
+            padding: 0;
+            border: 0;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
+        tbody, tr, th, td {
+            display: block;
+            padding: 0;
+            text-align: left;
+            white-space: normal;
+        }
+        th, td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid #dadada;
+                position: relative;
+                padding: 10px 0;
+                &:after {
+                    clear: both;
+                    content: ".";
+                    display: block;
+                    font-size: 0;
+                    height: 0;
+                    line-height: 0;
+                    visibility: hidden;
+                }
+            }
+            td {
+                font-size: 13px;
+                position: relative;
+                border: none !important;
+                &:last-child[data-tools] {
+                    top: 38px !important;
+                    i {
+                        font-size: 22px;
+                    }
+                }
+                &[data-icon] {
+                    font-size: 15px;
+                    float: left;
+                    width: 65px;
+                    padding: 0 12px;
+                    .label {
+                        width: 40px;
+                        min-width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        font-size: 12px;
+                    }
+                    &[scope="switch"]{
+                        width: 77px;
+                    }
+                }
+                &[data-tools] {
+                    position: absolute;
+                    top: 10px;
+                    right: 5px;
+                    padding: 0;
+                    font-size: 12px;
+                    width: 92px;
+                    text-align: right;
+                }
+                &[data-item] {
+                    width: calc(100% - 180px);
+                    font-size: 15px;
+                    float: left;
+                    padding: 0;
+                    margin-bottom: 5px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    position: relative;
+                    &[scope="time"]{
+                        color: #999;
+                        font-size: 14px;
+                        &:before {
+                            font-family: "FontAwesome";
+                            content: "\f017";
+                            display: inline-block;
+                            font-weight: 500;
+                            color: #999;
+                            font-size: 15px;
+                            margin-right: 5px;
+                        }
+                    }
+                    &[scope="name"]{
+                        width: calc(100% - 100px);
+                        margin-left: 10px;
+                        font-weight: 500;
+                    }
+                    &[scope="description"]{
+                        width: calc(100% - 100px);
+                        margin-left: 10px;
+                        &:before {
+                            content: attr(data-item);
+                            display: inline-block;
+                            font-size: 15px;
+                            margin-right: 5px;
+                        }
+                    }
+                    &[scope="detail"]{
+                        width: 50%;
+                        padding: 0 10px;
+                        color: #999;
+                        float: left;
+                        &:before {
+                            content: "-";
+                            display: inline-block;
+                            font-weight: 500;
+                            font-size: 15px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                &[data-none] {
+                    display: none;
+                }
+                &[data-label]{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    padding: 0;
+                }
+            }
+        }
+        .table-responsive {
+            border: none !important;
+            margin: 0 !important;
+        }
+    }
+}
